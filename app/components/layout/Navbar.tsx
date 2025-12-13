@@ -10,9 +10,7 @@ const navLinks = [
 export default function Navbar() {
   return (
     <nav className="hidden md:flex items-center gap-8">
-      <Link href="/" className="text-2xl font-bold text-primary">
-        MonEntreprise
-      </Link>
+      
       <ul className="flex gap-8">
         {navLinks.map((link) => (
           <li key={link.href}>
