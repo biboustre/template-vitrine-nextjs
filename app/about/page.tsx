@@ -9,7 +9,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl font-bold text-primary mb-6 text-center"
+          className="text-4xl font-bold text-primary dark:text-white mb-6 text-center"
         >
           À propos de nous
         </motion.h1>
@@ -17,7 +17,7 @@ export default function AboutPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-lg text-gray-700 max-w-2xl mx-auto text-center"
+          className="text-lg text-primary dark:text-white max-w-2xl mx-auto text-center"
         >
           Notre équipe accompagne les entreprises dans leur présence digitale
           avec des sites vitrines modernes, performants et adaptés à chaque

@@ -10,7 +10,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl font-bold text-primary mb-6 text-center"
+          className="text-4xl font-bold  mb-6 text-center"
         >
           Contactez-nous
         </motion.h1>
@@ -18,7 +18,7 @@ export default function ContactPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-lg text-gray-700 max-w-2xl mx-auto text-center mb-8"
+          className="text-lg  max-w-2xl mx-auto text-center mb-8"
         >
           Une question, un projet ? Remplissez le formulaire ci-dessous, nous
           vous répondrons rapidement.
