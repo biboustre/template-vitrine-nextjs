@@ -7,12 +7,12 @@ import {services} from "@/app/data/services";
 
 export default function ServicesPage() {
   return (
-      <section className="container mx-auto py-16 px-4 ">
+      <section className="container mx-auto py-16 px-4 text-secondary">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl font-bold text-primary mb-10 text-center"
+          className="text-4xl font-bold mb-10 text-center"
         >
           Nos services
         </motion.h1>

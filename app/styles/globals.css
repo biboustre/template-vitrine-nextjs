@@ -2,21 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   @apply bg-gray-50 text-gray-900;
+} */
+
+/*  */
+/* :root {
+  --color-primary: 220 90% 56%;
+  --color-secondary: 510 30% 36%;
+  --color-accent: 24 94% 50%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/* MANIERE DIFFERENTE DE FAIRE POUR LA CREATION DES VARIABLES CSS */
 :root {
-  --color-primary: #2563eb;
+  --color-primary: #343434;
+  --color-secondary: #fbbf24;
   --color-primary-dark: #1e40af;
+  --bg-primary: #fbbf24;
 }
 
 .text-primary {
   color: var(--color-primary);
 }
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
 .bg-primary {
-  background-color: var(--color-primary);
+  background-color: var(--bg-primary);
 }
-.bg-primary-dark {
-  background-color: var(--color-primary-dark);
-}
+

@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 
 export default function Banner() {
   return (
-    <section className="relative flex items-center justify-center h-[60vh] bg-gray-800">
+    <section className="relative flex items-center justify-center h-[60vh] pt-[80px] bg-">
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="z-10 text-center"
+        className="z-10 text-center text-secondary"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg mb-4">
           Bienvenue chez MonEntreprise
         </h1>
-        <p className="text-lg md:text-2xl text-white/90 mb-8">
+        <p className="text-lg md:text-2xl  mb-8">
           Votre partenaire pour un site vitrine moderne et performant
         </p>
       </motion.section>

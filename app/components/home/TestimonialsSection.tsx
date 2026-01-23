@@ -1,19 +1,13 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { testimonials } from "@/app/data/testimonials";
+import TitleH2 from "../ui/TitleH2";
 
 export default function TestimonialsSection() {
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-800 dark:to-gray-900">
-      <motion.h2
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold mb-10 text-primary dark:text-white text-center"
-      >
-        Ils nous font confiance
-      </motion.h2>
+      <TitleH2 title="Témoignages de nos clients" />
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
         {testimonials.map((t, idx) => (
           <motion.blockquote

@@ -1,7 +1,7 @@
 // import type { Metadata } from "next";
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
 
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={dark ? "dark" : ""}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 text-primary dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-500 dark:bg-gray-950 dark:text-white`}
       >
         <DarkModeContext.Provider value={{ dark, setDark }}>
           <Header />

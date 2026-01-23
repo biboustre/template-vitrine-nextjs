@@ -7,7 +7,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "hsl(var(--color-primary))",
+        secondary: "hsl(var(--color-secondary))",
+        accent: "hsl(var(--color-accent))",
+      },
+    },
   },
   plugins: [],
 };

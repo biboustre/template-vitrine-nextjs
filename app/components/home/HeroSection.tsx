@@ -9,12 +9,12 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="z-10"
+        className="z-10 text-secondary"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold text-primary dark:text-white drop-shadow mb-4 tracking-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
           Agence NovaWeb
         </h1>
-        <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg md:text-2xl  dark:text-gray-200 mb-8 max-w-2xl mx-auto">
           Nous aidons les entreprises à briller sur le web avec des sites
           modernes, animés et performants.
         </p>

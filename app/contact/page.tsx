@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function ContactPage() {
   return (
-      <section className="container mx-auto py-16 px-4 ">
+      <section className="container mx-auto py-16 px-4 text-secondary">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
