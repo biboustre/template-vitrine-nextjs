@@ -1,5 +1,5 @@
 
-export default function CallToSection() {
+export default function ContactSection() {
   return (
       <section className="py-16 px-4 bg-primary/90 dark:bg-primary-dark text-secondary text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">

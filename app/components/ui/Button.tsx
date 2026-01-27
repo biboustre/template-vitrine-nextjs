@@ -1,17 +1,22 @@
 import { ReactNode } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
+import Link from "next/link";
 
 type ButtonProps = HTMLMotionProps<"button"> & {
   variant?: "primary" | "secondary";
   children: ReactNode;
+  href?: string;
+  linkProps?: Omit<React.ComponentProps<typeof Link>, "href" | "children">;
 };
 
 export default function Button({
   children,
   variant = "primary",
+  href,
+  linkProps,
   ...props
 }: ButtonProps) {
-  return (
+  const button = (
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.97 }}
@@ -25,5 +30,13 @@ export default function Button({
     >
       {children}
     </motion.button>
+  );
+
+  return href ? (
+    <Link href={href} {...linkProps}>
+      {button}
+    </Link>
+  ) : (
+    button
   );
 }

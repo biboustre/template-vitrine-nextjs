@@ -1,10 +1,10 @@
 "use client";
-import HeroSection from "@/app/components/home/HeroSection";
-import ServicesSection from "@/app/components/home/ServicesSection";
+import HeroSection from "@/app/components/pages/home/HeroSection";
+import ServicesSection from "@/app/components/pages/home/ServicesSection";
 // import ClientsSection from "@/app/components/home/ClientsSection";
-import TestimonialsSection from "@/app/components/home/TestimonialsSection";
-import FaqSection from "@/app/components/home/FaqSection";
-import CallToSection from "./components/home/CallToSection";
+import TestimonialsSection from "@/app/components/pages/home/TestimonialsSection";
+import FaqSection from "@/app/components/pages/home/FaqSection";
+import ContactSection from "./components/pages/home/ContactSection";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       {/* <ClientsSection /> */}
       <TestimonialsSection />
       <FaqSection />
-      <CallToSection />
+      <ContactSection />
     </main>
   );
 }

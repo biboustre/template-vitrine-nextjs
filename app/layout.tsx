@@ -5,7 +5,7 @@ import "./styles/globals.css";
 
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import Banner from "./components/banner/Banner";
+import Banner from "./components/layout/Banner";
 import { createContext, useEffect, useState } from "react";
 
 const geistSans = Geist({

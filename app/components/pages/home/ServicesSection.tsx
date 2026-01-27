@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { services } from "@/app/data/services";
-import TitleH2 from "../ui/TitleH2";
+import TitleH2 from "../../ui/TitleH2";
 
 export default function ServicesSection() {
   return (

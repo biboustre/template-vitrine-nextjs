@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -12,12 +13,23 @@ export default function HeroSection() {
         className="z-10 text-secondary"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
-          Agence NovaWeb
+          Terrassement Expert
         </h1>
-        <p className="text-lg md:text-2xl  dark:text-gray-200 mb-8 max-w-2xl mx-auto">
-          Nous aidons les entreprises à briller sur le web avec des sites
-          modernes, animés et performants.
+        <p className="text-lg md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
+          Travaux de terrassement, aménagement de terrain et excavation pour particuliers et professionnels.<br />
+          <span className="text-accent font-semibold">Intervention rapide dans votre région !</span>
         </p>
+        <ul className="flex justify-center gap-4 mt-2 mb-6 text-sm text-gray-200">
+          <li>Terrassement</li>
+          <li>Aménagement</li>
+          <li>Excavation</li>
+        </ul>
+        <Link
+          href="/contact"
+          className="inline-block bg-accent text-black font-semibold px-8 py-4 rounded-xl mt-2 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent"
+        >
+          Demander un devis
+        </Link>
       </motion.section>
       {/* Animation décorative */}
       <motion.section
@@ -35,8 +47,8 @@ export default function HeroSection() {
         className="mt-8 flex justify-center"
       >
         <Image
-          src="/images/hero-illustration.svg"
-          alt="Illustration NovaWeb"
+          src="/images/terrassement-hero.jpg"
+          alt="Illustration terrassement"
           width={400}
           height={300}
           className="rounded-xl shadow-xl border border-primary/10"

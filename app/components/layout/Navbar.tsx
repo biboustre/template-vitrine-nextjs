@@ -15,7 +15,7 @@ export default function Navbar() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-lg font-medium text-primary hover:text-primary transition-colors"
+              className="text-lg font-medium text-slate-800 hover:text-primary transition-colors"
             >
               {link.label}
             </Link>

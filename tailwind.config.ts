@@ -13,6 +13,7 @@ module.exports = {
         secondary: "hsl(var(--color-secondary))",
         accent: "hsl(var(--color-accent))",
       },
+      // Les animations Banner sont maintenant gérées par Framer Motion
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import HamburgerMenu from "./HamburgerMenu";
 import DarkModeToggle from "./DarkModeToggle";
 // import AlertBanner from "./AlertBanner";
-import Link from "next/link";
+import { Logo } from "../ui/Logo";
 
 export default function Header() {
   return (
@@ -13,11 +13,7 @@ export default function Header() {
         aria-label="Navigation principale"
         className="relative h-[80px] flex items-center justify-between w-full bg-primary backdrop-blur-md shadow z-50 px-4 md:px-6"
       >
-        <section>
-          <Link href="/" className="text-2xl font-extrabold text-white md:text-3xl ">
-            NovaWeb
-          </Link>
-        </section>
+        <Logo title="Mon Site" />
         <Navbar />
         <section className="flex items-center gap-2">
           <DarkModeToggle />
