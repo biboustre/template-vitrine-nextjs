@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={dark ? "dark" : ""}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-500 dark:bg-gray-950 dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-400 dark:bg-gray-950 dark:text-white`}
       >
         <DarkModeContext.Provider value={{ dark, setDark }}>
           <Header />

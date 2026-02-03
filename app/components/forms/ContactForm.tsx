@@ -26,7 +26,7 @@ export default function ContactForm() {
         required
         rows={5}
       />
-      <Button type="submit" variant="primary">
+      <Button type="submit" variant="primary" className="bg-primary text-white">
         Envoyer
       </Button>
     </motion.form>

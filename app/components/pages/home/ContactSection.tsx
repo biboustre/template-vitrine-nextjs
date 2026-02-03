@@ -1,3 +1,4 @@
+import Button from "../../ui/Button";
 
 export default function ContactSection() {
   return (
@@ -8,12 +9,7 @@ export default function ContactSection() {
         <p className="text-lg mb-8">
           Contactez-nous pour un devis gratuit et personnalisé.
         </p>
-        <a
-          href="/contact"
-          className="inline-block px-8 py-3 rounded-full bg-white text-secondary font-semibold shadow-lg hover:bg-gray-100 transition-colors"
-        >
-          Demander un devis
-        </a>
+        <Button href="/contact">Contactez-nous</Button>
       </section>
   )
 }
