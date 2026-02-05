@@ -1,14 +1,22 @@
 export const faqs = [
   {
-    q: "Combien de temps pour créer un site vitrine ?",
-    a: "En moyenne 2 à 4 semaines selon la complexité et la réactivité du client.",
+    q: "Quels types de travaux de terrassement proposez-vous ?",
+    a: "Nous réalisons tous types de terrassements : nivellement de terrain, excavation, fondations, tranchées, assainissement, et préparation de sols pour la construction.",
   },
   {
-    q: "Le site sera-t-il optimisé pour le mobile ?",
-    a: "Oui, tous nos sites sont 100% responsive et testés sur tous les supports.",
+    q: "Comment obtenir un devis pour un projet de terrassement ?",
+    a: "Il suffit de nous contacter via le formulaire ou par téléphone. Nous étudions votre projet et vous envoyons un devis personnalisé rapidement.",
   },
   {
-    q: "Proposez-vous la maintenance ?",
-    a: "Oui, nous proposons des forfaits de maintenance adaptés à vos besoins.",
+    q: "Quels sont les délais moyens pour un chantier de terrassement ?",
+    a: "Les délais varient selon la taille et la complexité du chantier, mais nous nous engageons à intervenir rapidement et à respecter les délais annoncés lors du devis.",
+  },
+  {
+    q: "Les travaux de terrassement sont-ils garantis ?",
+    a: "Oui, tous nos travaux sont couverts par une garantie décennale et réalisés dans le respect des normes en vigueur.",
+  },
+  {
+    q: "Faut-il des autorisations pour réaliser un terrassement ?",
+    a: "Selon la nature et l’emplacement des travaux, des autorisations peuvent être nécessaires. Nous vous accompagnons dans les démarches administratives si besoin.",
   },
 ];

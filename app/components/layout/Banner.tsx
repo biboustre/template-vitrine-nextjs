@@ -69,7 +69,7 @@ export default function Banner() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              <Button href={banner.cta.href} className="hover:text-[#fbbf20]">
+              <Button href={banner.cta.href}>
                 {banner.cta.label}
               </Button>
             </motion.section>

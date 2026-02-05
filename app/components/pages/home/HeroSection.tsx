@@ -11,12 +11,12 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="z-10 text-secondary flex flex-col items-center justify-center"
+        className="z-10 flex flex-col items-center justify-center"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
+        <h1 className="text-4xl text-secondary md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
           Terrassement Expert
         </h1>
-        <p className="text-xl md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
+        <p className="text-xl text-white md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
           Travaux de terrassement, aménagement de terrain et excavation pour particuliers et professionnels.<br />
           <span className="text-accent font-semibold">Intervention rapide dans votre région !</span>
         </p>

@@ -18,7 +18,7 @@ export default function ContactPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-lg  max-w-2xl mx-auto text-center mb-8"
+          className="text-lg text-white max-w-2xl mx-auto text-center mb-8"
         >
           Une question, un projet ? Remplissez le formulaire ci-dessous, nous
           vous répondrons rapidement.

@@ -40,6 +40,6 @@ export const bannerConfig: Record<string, BannerConfig> = {
   "/contact": {
     title: "Besoin d’un renseignement ?",
     subtitle: "Contactez-nous, nous vous répondrons rapidement",
-    image: "/images/banners/engin-1.jpg",
+    image: "/images/banners/engin-3.jpg",
   },
 };
