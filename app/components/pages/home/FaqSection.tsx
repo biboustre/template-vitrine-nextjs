@@ -7,7 +7,7 @@ export default function FaqSection() {
   return (
     <section className="container mx-auto py-16 px-4">
       <TitleH2 title="Questions fréquentes" />
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto mt-12">
         {faqs.map((faq, idx) => (
           <motion.details
             key={faq.q}

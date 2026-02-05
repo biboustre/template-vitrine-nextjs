@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { bannerConfig } from "../../config/banner";
 import { motion } from "framer-motion";
+import Button from "../ui/Button";
 
 // Composant Banner principal
 export default function Banner() {
@@ -38,10 +38,10 @@ export default function Banner() {
 
       {/* Contenu animé */}
       <section className="relative z-10 h-full flex items-center">
-        <section className="container mx-auto px-4 text-center text-white">
+        <section className="container mx-auto px-4 text-center text-gray-200">
           <motion.h1
             key={pathname + banner.title}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 2xl:text-7xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -50,7 +50,7 @@ export default function Banner() {
           </motion.h1>
           <motion.p
             key={pathname + banner.subtitle}
-            className="max-w-2xl mx-auto text-base md:text-lg lg:text-xl"
+            className="max-w-4xl mx-auto text-base md:text-lg lg:text-xl 2xl:text-3xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
@@ -69,21 +69,9 @@ export default function Banner() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              <Link
-                href={banner.cta.href}
-                className="
-                  inline-block
-                  bg-accent text-black
-                  font-semibold
-                  px-8 py-4
-                  rounded-xl
-                  transition
-                  hover:scale-105
-                  focus:outline-none focus:ring-2 focus:ring-accent
-                "
-              >
+              <Button href={banner.cta.href} className="hover:text-[#fbbf20]">
                 {banner.cta.label}
-              </Link>
+              </Button>
             </motion.section>
           )}
         </section>

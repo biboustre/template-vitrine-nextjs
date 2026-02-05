@@ -1,5 +1,26 @@
 import React from "react";
 
+type FormLabelFieldProps = {
+  children: React.ReactNode;
+  required?: boolean;
+  htmlFor?: string;
+  className?: string;
+};
+
+export default function FormLabelField({
+  children,
+  required,
+  htmlFor,
+  className,
+}: FormLabelFieldProps) {
+  return (
+    <label htmlFor={htmlFor} className={`${className} mb-2 inline-block`}>
+      {required && <span className="text-slate-500 mr-1">*</span>}
+      {children}
+    </label>
+  );
+}
+
 interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   id: string;
@@ -8,9 +29,9 @@ interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
 export function InputField({ label, id, ...props }: InputFieldProps) {
   return (
     <div>
-      <label htmlFor={id} className="block font-medium mb-1">
+      <FormLabelField htmlFor={id} required={props.required}>
         {label}
-      </label>
+      </FormLabelField>
       <input
         id={id}
         {...props}
@@ -23,8 +44,7 @@ export function InputField({ label, id, ...props }: InputFieldProps) {
   );
 }
 
-interface TextareaFieldProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface TextareaFieldProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string;
   id: string;
 }
@@ -32,9 +52,9 @@ interface TextareaFieldProps
 export function TextareaField({ label, id, ...props }: TextareaFieldProps) {
   return (
     <div>
-      <label htmlFor={id} className="block font-medium mb-1">
+      <FormLabelField htmlFor={id} required={props.required}>
         {label}
-      </label>
+      </FormLabelField>
       <textarea
         id={id}
         {...props}

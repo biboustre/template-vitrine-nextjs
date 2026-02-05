@@ -2,52 +2,44 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../../ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center overflow-hidden bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-800 dark:to-gray-900">
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="z-10 text-secondary"
+        className="z-10 text-secondary flex flex-col items-center justify-center"
       >
         <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
           Terrassement Expert
         </h1>
-        <p className="text-lg md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
           Travaux de terrassement, aménagement de terrain et excavation pour particuliers et professionnels.<br />
           <span className="text-accent font-semibold">Intervention rapide dans votre région !</span>
         </p>
-        <ul className="flex justify-center gap-4 mt-2 mb-6 text-sm text-gray-200">
+        <ul className="flex flex-col md:flex-row md:flex-wrap gap-4 text-gray-200 text-xl font-bold">
           <li>Terrassement</li>
           <li>Aménagement</li>
           <li>Excavation</li>
         </ul>
-        <Link
+        <Button
           href="/contact"
-          className="inline-block bg-accent text-black font-semibold px-8 py-4 rounded-xl mt-2 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent"
+          className="my-10"
         >
           Demander un devis
-        </Link>
-      </motion.section>
-      {/* Animation décorative */}
-      <motion.section
-        className="absolute inset-0 z-0 pointer-events-none"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.3, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.2 }}
-      >
-        <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/30 via-blue-300/20 to-transparent" />
+        </Button>
       </motion.section>
       <motion.figure
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, delay: 0.5, type: "spring" }}
-        className="mt-8 flex justify-center"
+        className=" flex justify-center"
       >
         <Image
-          src="/images/terrassement-hero.jpg"
+          src="/images/banners/engin-1.jpg"
           alt="Illustration terrassement"
           width={400}
           height={300}

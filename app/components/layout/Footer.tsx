@@ -6,10 +6,10 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} MonEntreprise. Tous droits réservés.
         </span>
         <div className="flex gap-4 mt-2 md:mt-0">
-          <a href="/mentions-legales" className="hover:underline text-gray-400">
+          <a href="/mentions-legales" className="hover:underline dark:text-gray-400">
             Mentions légales
           </a>
-          <a href="/contact" className="hover:underline text-gray-400">
+          <a href="/contact" className="hover:underline dark:text-gray-400">
             Contact
           </a>
         </div>

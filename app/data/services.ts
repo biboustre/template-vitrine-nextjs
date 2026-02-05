@@ -1,22 +1,26 @@
 export const services = [
   {
-    icon: "💡",
-    title: "Conseil & Stratégie",
-    description: "Nous accompagnons votre entreprise dans sa transformation digitale avec des solutions sur-mesure.",
+    icon: "🚜",
+    title: "Travaux de terrassement",
+    description:
+      "Réalisation de tous vos travaux de terrassement : excavation, nivellement de terrain, préparation de chantier pour construction ou aménagement extérieur.",
   },
   {
-    icon: "🖥️",
-    title: "Création de site web",
-    description: "Sites vitrines modernes, performants et responsive, adaptés à votre image.",
+    icon: "🏗️",
+    title: "Aménagement extérieur",
+    description:
+      "Création dallées, parkings, accès, tranchées et plateformes. Solutions sur-mesure pour particuliers et professionnels.",
   },
   {
-    icon: "📈",
-    title: "Référencement SEO",
-    description: "Optimisation de votre visibilité sur Google et les moteurs de recherche.",
+    icon: "💧",
+    title: "Assainissement & drainage",
+    description:
+      "Installation de systèmes d’assainissement, drainage des eaux pluviales, fosses septiques et raccordements aux réseaux publics.",
   },
   {
-    icon: "🎨",
-    title: "Identité visuelle",
-    description: "Création de logo, charte graphique et supports de communication.",
+    icon: "🛠️",
+    title: "Location d’engins de chantier",
+    description:
+      "Location de pelleteuses, mini-pelles, camions-bennes avec chauffeur pour tous vos chantiers de terrassement et travaux publics.",
   },
 ];

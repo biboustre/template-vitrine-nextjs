@@ -10,7 +10,7 @@ export type BannerConfig = {
 
 export const bannerConfig: Record<string, BannerConfig> = {
   "/": {
-    title: "Bienvenue chez Entreprise Dupont",
+    title: "Bienvenue chez Entreprise Bertrand",
     subtitle:
       "Artisan de confiance pour tous vos travaux de terrassement et rénovation en région paca",
     image: "/images/banners/engin-3.jpg",
@@ -33,7 +33,7 @@ export const bannerConfig: Record<string, BannerConfig> = {
     image: "/images/banners/engin-1.jpg",
     cta: {
       label: "Voir nos prestations",
-      href: "#services",
+      href: "/services",
     },
   },
 

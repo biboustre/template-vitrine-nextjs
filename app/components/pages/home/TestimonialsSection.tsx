@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-800 dark:to-gray-900">
       <TitleH2 title="Témoignages de nos clients" />
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-[1700px] mx-auto mt-12">
         {testimonials.map((t, idx) => (
           <motion.blockquote
             key={t.name}
