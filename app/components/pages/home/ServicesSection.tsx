@@ -5,7 +5,7 @@ import TitleH2 from "../../ui/TitleH2";
 
 export default function ServicesSection() {
   return (
-    <section className="container mx-auto py-16 px-4">
+    <section className="relative  w-full py-16 px-4">
       <TitleH2 title="Nos services" />
       <motion.div
         initial="hidden"
@@ -19,7 +19,7 @@ export default function ServicesSection() {
             },
           },
         }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-[1400px] mx-auto"
       >
         {services.map((service, idx) => (
           <motion.div
@@ -40,6 +40,14 @@ export default function ServicesSection() {
           </motion.div>
         ))}
       </motion.div>
+      <motion.img
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 0.25, scale: 1 }}
+          transition={{ delay: 0.2, duration: 1.2 }}
+          src="/images/banners/engin-2.jpg"
+          alt="Terrassement professionnel"
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-0"
+        />
     </section>
   );
 }
