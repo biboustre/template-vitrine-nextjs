@@ -5,7 +5,7 @@ import Button from "../../ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center overflow-hidden bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-800 dark:to-gray-900">
+    <section className="relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-800 dark:to-gray-900">
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

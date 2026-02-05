@@ -16,8 +16,9 @@ export default function HeroImages() {
             alt={img.alt}
             width={600}
             height={400}
-            className="w-full h-full object-cover rounded-lg shadow"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            // className="w-full h-full object-cover rounded-lg shadow"
+            className="w-full h-[200px] object-cover rounded-lg shadow"
+            // sizes="(max-width: 768px) 100vw, 33vw"
             priority
           />
         </figure>

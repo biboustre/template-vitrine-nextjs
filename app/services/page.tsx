@@ -84,7 +84,7 @@ export default function ServicesPage() {
           transition={{ delay: 0.2, duration: 1.2 }}
           src="/images/banners/engin-2.jpg"
           alt="Terrassement professionnel"
-          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-0"
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-[-10]"
         />
       </section>
 
