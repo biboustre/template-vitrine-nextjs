@@ -28,7 +28,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: idx * 0.15 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-primary/10 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+            className="bg-white dark:bg-gray-900/70 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-primary/10 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
           >
             <span className="text-5xl mb-4">{service.icon}</span>
             <h3 className="font-semibold text-center text-xl mb-2 text-primary dark:text-white">
@@ -42,11 +42,11 @@ export default function ServicesSection() {
       </motion.div>
       <motion.img
           initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 0.25, scale: 1 }}
+          animate={{ opacity: 0.55, scale: 1 }}
           transition={{ delay: 0.2, duration: 1.2 }}
           src="/images/banners/engin-2.jpg"
           alt="Terrassement professionnel"
-          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-0"
+          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-[-10]"
         />
     </section>
   );

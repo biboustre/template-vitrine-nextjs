@@ -67,7 +67,7 @@ export default function ServicesPage() {
               transition: { staggerChildren: 0.15 },
             },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 max-w-[1400px] mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1400px] mx-auto"
         >
           {services.map((service) => (
             <ServiceCard
