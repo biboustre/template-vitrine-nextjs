@@ -25,16 +25,18 @@ export default function ServicesPage() {
       >
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-4xl md:text-6xl font-extrabold mb-6 text-center text-secondary drop-shadow-lg"
         >
           Nos services de terrassement
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 40 }}
           transition={{ delay: 0.2, duration: 0.7 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-lg md:text-xl max-w-2xl mx-auto text-center mb-6 text-white/90"
         >
           Terrassement Pro vous accompagne dans tous vos projets : préparation

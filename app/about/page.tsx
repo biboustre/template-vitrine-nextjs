@@ -11,7 +11,8 @@ export default function AboutPage() {
         <section className="flex flex-col gap-12 mb-16">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-5xl font-bold dark:text-secondary text-center"
           >
@@ -19,7 +20,8 @@ export default function AboutPage() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-lg text-white dark:text-white max-w-2xl mx-auto text-center md:text-xl"
           >
