@@ -1,7 +1,9 @@
-export default function Footer() {
+import SeoFooter from "../seo/SeoFooter";
+
+export default function Footer({ children }: { children?: React.ReactNode }) {
   return (
     <footer className="w-full  text-white py-6 pt-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+      {/* <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         <span className="text-sm">
           &copy; {new Date().getFullYear()} MonEntreprise. Tous droits réservés.
         </span>
@@ -14,6 +16,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      {children} */}
+      <SeoFooter />
     </footer>
   );
 }

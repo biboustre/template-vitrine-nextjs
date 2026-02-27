@@ -1,15 +1,15 @@
 "use client";
-import Navbar from "./Navbar";
-import HamburgerMenu from "./HamburgerMenu";
-import DarkModeToggle from "./DarkModeToggle";
-// import AlertBanner from "./AlertBanner";
-import { Logo } from "../ui/Logo";
+// import Navbar from "./Navbar";
+// import HamburgerMenu from "./HamburgerMenu";
+// import DarkModeToggle from "./DarkModeToggle";
+// import { Logo } from "../ui/Logo";
+import MainMenu from "../navigation/MainMenu";
 
 export default function Header() {
   return (
-    <header className="w-full fixed z-20">
+    <header className="w-full fixed z-20 ">
       {/* <AlertBanner /> */}
-      <nav
+      {/* <nav
         aria-label="Navigation principale"
         className="relative h-[80px] flex items-center justify-between w-full bg-primary backdrop-blur-md shadow z-50 px-4 md:px-6"
       >
@@ -19,7 +19,8 @@ export default function Header() {
           <DarkModeToggle />
           <HamburgerMenu />
         </section>
-      </nav>
+      </nav> */}
+      <MainMenu />
     </header>
   );
 }

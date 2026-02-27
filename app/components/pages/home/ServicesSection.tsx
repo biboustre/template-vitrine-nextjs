@@ -6,7 +6,7 @@ import TitleH2 from "../../ui/TitleH2";
 export default function ServicesSection() {
   return (
     <section className="relative  w-full py-16 px-4">
-      <TitleH2 title="Nos services" />
+      <TitleH2 title="Nos services de terrassement à Nice et alentours" />
       <motion.div
         initial="hidden"
         whileInView="visible"

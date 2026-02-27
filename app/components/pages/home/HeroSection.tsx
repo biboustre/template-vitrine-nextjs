@@ -13,14 +13,20 @@ export default function HeroSection() {
         className="z-10 flex flex-col items-center justify-center"
       >
         <h1 className="text-4xl text-secondary md:text-6xl font-extrabold dark:text-white drop-shadow mb-4 tracking-tight">
-          Terrassement Expert
+          Entreprise de terrassement à Nice et dans les Alpes-Maritimes
         </h1>
         <p className="text-xl text-white md:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
-          Travaux de terrassement, aménagement de terrain et excavation pour
-          particuliers et professionnels.
+          TP Terrassement Pro est une entreprise spécialisée dans les travaux de
+          terrassement, VRD, assainissement, fondations et terrassement de
+          piscines à Nice et dans l’ensemble des Alpes-Maritimes. Nous
+          accompagnons les particuliers et professionnels dans tous leurs
+          projets de construction, d’aménagement extérieur et de préparation de
+          terrain, aussi bien en zone urbaine que dans l’arrière-pays niçois.
           <br />
           <span className="text-accent font-semibold">
-            Intervention rapide dans votre région !
+            Nous intervenons principalement à Nice, Grasse, Vence, Carros, La
+            Trinité, Drap, Saint-Laurent-du-Var ainsi que dans l’ensemble des
+            villages de l’arrière-pays niçois.
           </span>
         </p>
         <Button href="/contact" className="my-10">
