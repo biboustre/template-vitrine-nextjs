@@ -7,6 +7,7 @@ import SeoInternalLinks from "@/app/components/seo/SeoInternalLinks";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/app/components/seo/ServiceShema";
+import GeoSchema from "@/app/components/seo/geoSchema";
 
 type PageProps = {
   params: Promise<{
@@ -52,6 +53,7 @@ export default async function TerrassementVillePage({ params }: PageProps) {
     <main className="container mx-auto px-4 py-16">
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema service="Terrassement" city={{ name: city.name, department: city.department }} />
+      <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
       <h1 className="text-4xl font-bold mb-6">

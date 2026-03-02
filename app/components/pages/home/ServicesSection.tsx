@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { services } from "@/app/data/services";
-import TitleH2 from "../../ui/TitleH2";
+import TitleH2 from "../../ui/TitleH1";
 
 export default function ServicesSection() {
   return (
@@ -41,13 +41,13 @@ export default function ServicesSection() {
         ))}
       </motion.div>
       <motion.img
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 0.55, scale: 1 }}
-          transition={{ delay: 0.2, duration: 1.2 }}
-          src="/images/banners/engin-2.jpg"
-          alt="Terrassement professionnel"
-          className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-[-10]"
-        />
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 0.55, scale: 1 }}
+        transition={{ delay: 0.2, duration: 1.2 }}
+        src="/images/banners/engin-2.jpg"
+        alt="Terrassement professionnel"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-[-10]"
+      />
     </section>
   );
 }

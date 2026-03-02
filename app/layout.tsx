@@ -6,8 +6,6 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Banner from "./components/layout/Banner";
 import { DarkModeProvider } from "./components/layout/DarkModeProvider";
-import SeoFooter from "./components/seo/SeoFooter";
-import MainMenu from "./components/navigation/MainMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +87,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const bgGradient = "bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-700 dark:to-gray-900";
   return (
     <html lang="fr">
       <head>
@@ -161,7 +160,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-400 dark:bg-gray-950 dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${bgGradient}  dark:text-white`}
       >
         <DarkModeProvider>
           <Header />

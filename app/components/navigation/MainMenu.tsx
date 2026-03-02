@@ -16,7 +16,6 @@ export default function MainMenu() {
   return (
     <nav className=" w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
         {/* Logo */}
         <Link href="/" className="font-bold text-xl text-black">
           TP & Assainissement
@@ -24,27 +23,28 @@ export default function MainMenu() {
 
         {/* Menu principal */}
         <ul className="flex gap-8 items-center">
-
           <li>
             <Link href="/">Accueil</Link>
           </li>
 
-          {SERVICES.map(service => (
+          {SERVICES.map((service) => (
             <li
               key={service.key}
               className="relative"
               onMouseEnter={() => setOpenService(service.key)}
               onMouseLeave={() => setOpenService(null)}
             >
-              <span className="cursor-pointer">
+              <Link
+                href={`/services/${service.key}`}
+                className="cursor-pointer"
+              >
                 {service.label}
-              </span>
+              </Link>
 
               {/* Mega menu local SEO */}
               {openService === service.key && (
                 <div className="absolute top-full left-0 bg-white shadow-xl border rounded-lg p-4 w-[360px] grid grid-cols-2 gap-2 z-50">
-
-                  {cities.slice(0, 12).map(city => (
+                  {cities.slice(0, 12).map((city) => (
                     <Link
                       key={city.slug}
                       href={`/services/${service.key}/${city.slug}`}
@@ -53,20 +53,18 @@ export default function MainMenu() {
                       {service.label} à {city.name}
                     </Link>
                   ))}
-
                 </div>
               )}
             </li>
           ))}
 
           <li>
-            <Link href="/zones">Zones d&apos;intervention</Link>
+            <Link href="/zones-d-intervention">Zones d&apos;intervention</Link>
           </li>
 
           <li>
             <Link href="/contact">Contact</Link>
           </li>
-
         </ul>
       </div>
     </nav>

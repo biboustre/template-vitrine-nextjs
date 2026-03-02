@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { testimonials } from "@/app/data/testimonials";
-import TitleH2 from "../../ui/TitleH2";
+import TitleH2 from "../../ui/TitleH1";
 
 export default function TestimonialsSection() {
   return (
