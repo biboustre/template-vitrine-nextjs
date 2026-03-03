@@ -15,9 +15,9 @@ export default function MainMenu() {
 
   return (
     <nav className=" w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <section className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl text-black">
+        <Link href="/" className="font-bold text-xl">
           TP & Assainissement
         </Link>
 
@@ -66,7 +66,7 @@ export default function MainMenu() {
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
-      </div>
+      </section>
     </nav>
   );
 }

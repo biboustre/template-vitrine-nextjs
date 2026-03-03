@@ -5,9 +5,8 @@ import Button from "../../ui/Button";
 import TitleH2 from "../../ui/TitleH1";
 
 export default function HeroSection() {
-  const bgGradient = "bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-700 dark:to-gray-900";  
   return (
-    <section className={`relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden ${bgGradient}`}>
+    <section className={`relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden}`}>
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

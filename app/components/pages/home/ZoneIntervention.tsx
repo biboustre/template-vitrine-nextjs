@@ -61,8 +61,8 @@ export default function ZoneIntervention() {
     <section className={`flex flex-col items-center gap-6 py-16 px-4 ${bgGradient}`}>
       <TitleH1 className="text-center" title="Zone d'intervention" />
       <p className="text-xl text-center mb-6 max-w-3xl mx-auto 2xl:text-2xl">
-        Nous intervenons dans tout le secteur de Nice et des Alpes-Maritimes :
-        Nice, Grasse, Vence, Carros, La Trinité, Drap, Saint-Laurent-du-Var
+        Nous intervenons dans le secteur des Alpes-Maritimes et du Var :
+        Nice, Grasse, Canne, Carros, Seranon, Saint-Laurent-du-Var
         ainsi que dans les villages de l&apos;arrière-pays niçois.
       </p>
 
@@ -71,7 +71,7 @@ export default function ZoneIntervention() {
           <Link
             key={link.href}
             href={link.href}
-            className="px-4 py-2 bg-[#d29f1e] text-white rounded hover:bg-primary-dark transition hover:scale-90 duration-300"
+            className="px-4 py-2 bg-[#c79c2f] text-white rounded hover:bg-primary-dark transition hover:scale-90 duration-300"
           >
             {link.label}
           </Link>

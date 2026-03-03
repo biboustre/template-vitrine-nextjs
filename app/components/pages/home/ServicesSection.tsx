@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { services } from "@/app/data/services";
 import TitleH2 from "../../ui/TitleH1";
+import { img } from "framer-motion/m";
+import AnimatedAppear from "@/app/components/ui/animations/AnimatedAppear";
 
 export default function ServicesSection() {
   return (
@@ -22,14 +24,9 @@ export default function ServicesSection() {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-[1400px] mx-auto"
       >
         {services.map((service, idx) => (
-          <motion.div
-            key={service.title}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: idx * 0.15 }}
-            viewport={{ once: true }}
-            className="bg-white dark:bg-gray-900/70 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-primary/10 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
-          >
+          <AnimatedAppear key={service.icon} delay={idx * 150} className="bg-white dark:bg-gray-900/70 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-primary/10 hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+            
+          
             <span className="text-5xl mb-4">{service.icon}</span>
             <h3 className="font-semibold text-center text-xl mb-2 text-primary dark:text-white">
               {service.title}
@@ -37,7 +34,7 @@ export default function ServicesSection() {
             <p className="text-gray-600 dark:text-gray-300 text-center">
               {service.description}
             </p>
-          </motion.div>
+          </AnimatedAppear>
         ))}
       </motion.div>
       <motion.img
