@@ -24,86 +24,108 @@ export default function AssainissementPage() {
     <main className="container mx-auto px-4 py-16">
       <BreadcrumbSchema items={breadcrumbs} />
       <Breadcrumbs items={breadcrumbs} />
-
       <ServiceSchema
         service="Assainissement"
         city={{ name: "Var & Alpes-Maritimes", department: "PACA" }}
         geo={{ lat: 43.424, lng: 6.769, radiusKm: 50 }}
       />
-
-      <div className="flex flex-col gap-8 text-slate-50">
+      <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
-            Entreprise d&apos;assainissement – Travaux conformes aux normes dans
-            le Var et les Alpes-Maritimes
-          </h1>
+          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <img
+              src="/images/banners/assainissement-1.jpg"
+              alt="Assainissement professionnel"
+              className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
+            />
+            <div>
+              <h1 className="text-4xl text-[#0e7490] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+                Entreprise d&apos;assainissement – Travaux conformes aux normes
+                dans le Var et les Alpes-Maritimes
+              </h1>
+              <p className="text-lg text-gray-800 font-medium">
+                Des solutions d&apos;assainissement fiables, conformes et
+                durables pour tous vos besoins, particuliers et professionnels.
+              </p>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <section className="prose max-w-none text-lg animate-fade-in">
-            <p className={styleParagraphe}>
-              Notre entreprise est spécialisée dans les travaux
-              d&apos;assainissement collectif et individuel. Nous intervenons
-              pour la pose, la rénovation et la mise en conformité des systèmes
-              d&apos;évacuation des eaux usées pour les particuliers et
-              professionnels.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Qu'est-ce que l'assainissement ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                L&apos;assainissement regroupe l&apos;ensemble des techniques
+                permettant la collecte, le traitement et l&apos;évacuation des
+                eaux usées domestiques et industrielles, dans le respect des
+                normes sanitaires et environnementales.
+              </p>
+            </div>
+            <img
+              src="/images/banners/assainissement-2.jpg"
+              alt="Travaux d'assainissement"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+            />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Qu'est-ce que l'assainissement ?" />
-            <p className={styleParagraphe}>
-              L&apos;assainissement regroupe l&apos;ensemble des techniques
-              permettant la collecte, le traitement et l&apos;évacuation des
-              eaux usées domestiques et industrielles, dans le respect des
-              normes sanitaires et environnementales.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <img
+              src="/images/banners/assainissement-3.jpg"
+              alt="Prestations assainissement"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56 order-2 md:order-1"
+            />
+            <div className="flex-1 order-1 md:order-2">
+              <TitleH2 title="Nos prestations d'assainissement" />
+              <ul
+                className={`list-disc pl-6 space-y-2 ${styleParagraphe} text-gray-700`}
+              >
+                <li>Assainissement collectif</li>
+                <li>Assainissement non collectif (ANC)</li>
+                <li>Installation de fosses septiques</li>
+                <li>Micro-stations d&apos;épuration</li>
+                <li>Raccordement au tout-à-l&apos;égout</li>
+                <li>Mise aux normes SPANC</li>
+              </ul>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={300}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Nos prestations d'assainissement" />
-            <ul className={`list-disc pl-6 space-y-2 ${styleParagraphe}`}>
-              <li>Assainissement collectif</li>
-              <li>Assainissement non collectif (ANC)</li>
-              <li>Installation de fosses septiques</li>
-              <li>Micro-stations d&apos;épuration</li>
-              <li>Raccordement au tout-à-l&apos;égout</li>
-              <li>Mise aux normes SPANC</li>
-            </ul>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Pourquoi choisir notre entreprise ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                Nous disposons d&apos;un savoir-faire reconnu et
+                d&apos;équipements modernes permettant d&apos;intervenir
+                rapidement, efficacement et dans le strict respect de la
+                réglementation en vigueur.
+              </p>
+            </div>
+            <img
+              src="/images/banners/assainissement-4.jpg"
+              alt="Equipe assainissement"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+            />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={400}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Pourquoi choisir notre entreprise ?" />
-            <p className={styleParagraphe}>
-              Nous disposons d&apos;un savoir-faire reconnu et
-              d&apos;équipements modernes permettant d&apos;intervenir
-              rapidement, efficacement et dans le strict respect de la
-              réglementation en vigueur.
-            </p>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection delay={500}>
-          <section className="prose max-w-none animate-fade-in">
+          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8">
             <TitleH2 title="Nos zones d'interventions" />
-            <p className={styleParagraphe}>
+            <p className={styleParagraphe + " text-gray-800"}>
               Nous intervenons dans de nombreuses communes du Var et des
               Alpes-Maritimes :
             </p>
-            <section className="rounded-xl mt-14 animate-fade-in">
+            <section className="rounded-xl mt-8 animate-fade-in">
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {cities.map((city, idx) => (
-                  <AnimatedSection key={city.slug} delay={600 + idx * 60}>
+                  <AnimatedSection key={city.slug} delay={500 + idx * 60}>
                     <li>
                       <Link
                         href={`/services/assainissement/${city.slug}`}
-                        className=" px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-400 transition-colors flex items-center"
+                        className="block px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-400 transition-colors flex items-center"
                       >
                         Assainissement à {city.name}
                         <span className="ml-2">→</span>
@@ -113,7 +135,7 @@ export default function AssainissementPage() {
                 ))}
               </ul>
             </section>
-          </section>
+          </div>
         </AnimatedSection>
       </div>
     </main>

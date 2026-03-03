@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/app/components/seo/ServiceShema";
+import GeoSchema from "@/app/components/seo/GeoSchema";
+import AnimatedSection from "@/app/components/ui/animations/AnimatedSection";
 
 type PageProps = {
   params: Promise<{ ville: string }>;
@@ -13,7 +15,7 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps) {
   const { ville } = await params;
   const slug = decodeURIComponent(ville).toLowerCase();
-  const city = cities.find(c => c.slug === slug);
+  const city = cities.find((c) => c.slug === slug);
 
   if (!city)
     return {
@@ -26,12 +28,10 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-
-
 export default async function PiscineVillePage({ params }: PageProps) {
   const { ville } = await params;
   const slug = decodeURIComponent(ville).toLowerCase();
-  const city = cities.find(c => c.slug === slug);
+  const city = cities.find((c) => c.slug === slug);
 
   if (!city) return notFound();
 
@@ -52,25 +52,30 @@ export default async function PiscineVillePage({ params }: PageProps) {
           department: city.department,
         }}
       />
+      <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="text-4xl font-bold mb-6">
-        Terrassement de piscine à {city.name}
-      </h1>
-
-      <article className="prose max-w-none">
+      <div className="flex flex-col gap-8 text-slate-50">
+        <AnimatedSection delay={0}>
+          <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
+            Terrassement de piscine à {city.name}
+          </h1>
+        </AnimatedSection>
         {content.split("\n").map((line, i) => (
-          <p key={i}>{line}</p>
+          <AnimatedSection key={i} delay={100 + i * 80}>
+            <p className="md:text-xl 2xl:text-2xl animate-fade-in">{line}</p>
+          </AnimatedSection>
         ))}
-      </article>
-
-      <SeoInternalLinks
-        service="piscine"
-        city={{
-          name: city.name,
-          slug: city.slug,
-        }}
-      />
+        <AnimatedSection delay={content.split("\n").length * 80 + 200}>
+          <SeoInternalLinks
+            service="piscine"
+            city={{
+              name: city.name,
+              slug: city.slug,
+            }}
+          />
+        </AnimatedSection>
+      </div>
     </main>
   );
 }

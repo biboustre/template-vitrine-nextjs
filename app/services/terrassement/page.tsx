@@ -18,89 +18,108 @@ export default function TerrassementPage() {
     { label: "Terrassement", href: "/services/terrassement" },
   ];
 
-  const styleParagraphe = "md:text-xl 2xl:text-2xl"
+  const styleParagraphe = "md:text-xl 2xl:text-2xl";
 
   return (
     <main className="container mx-auto px-4 py-16">
       <BreadcrumbSchema items={breadcrumbs} />
       <Breadcrumbs items={breadcrumbs} />
-
       <ServiceSchema
         service="Terrassement"
-        city={{
-          name: "Var & Alpes-Maritimes",
-          department: "PACA",
-        }}
+        city={{ name: "Var & Alpes-Maritimes", department: "PACA" }}
       />
-
-      {/* Animation container */}
-      <div className="flex flex-col gap-8 text-slate-50">
+      <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
-            Entreprise de terrassement – Travaux professionnels dans le Var et
-            les Alpes-Maritimes
-          </h1>
+          <div className="bg-gradient-to-r from-[#fbbf24]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <img
+              src="/images/banners/engin-1.jpg"
+              alt="Engin terrassement"
+              className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
+            />
+            <div>
+              <h1 className="text-4xl text-[#b45309] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+                Entreprise de terrassement – Travaux professionnels dans le Var
+                et les Alpes-Maritimes
+              </h1>
+              <p className="text-lg text-gray-800 font-medium">
+                Des solutions sur-mesure pour tous vos projets de terrassement,
+                avec un accompagnement de A à Z.
+              </p>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <section className="prose max-w-none text-lg  animate-fade-in">
-            <p className={styleParagraphe}>
-              Notre entreprise est spécialisée dans les travaux de terrassement
-              pour les particuliers et professionnels. Nous intervenons pour
-              tous types de chantiers : maisons individuelles, piscines,
-              aménagements extérieurs, VRD et nivellement de terrain.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Qu'est-ce que le terrassement ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                Le terrassement consiste à préparer un terrain avant
+                construction. Il comprend l&apos;excavation, le nivellement, la
+                stabilisation du sol et la création des fondations nécessaires à
+                la solidité des ouvrages.
+              </p>
+            </div>
+            <img
+              src="/images/banners/engin-2.jpg"
+              alt="Travaux de terrassement"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+            />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Qu&apos;est-ce que le terrassement ?" />
-            <p className={styleParagraphe}>
-              Le terrassement consiste à préparer un terrain avant construction.
-              Il comprend l&apos;excavation, le nivellement, la stabilisation du
-              sol et la création des fondations nécessaires à la solidité des
-              ouvrages.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <img
+              src="/images/banners/engin-3.jpg"
+              alt="Prestations terrassement"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56 order-2 md:order-1"
+            />
+            <div className="flex-1 order-1 md:order-2">
+              <TitleH2 title="Nos prestations de terrassement" />
+              <ul
+                className={`list-disc pl-6 space-y-2 ${styleParagraphe} text-gray-700`}
+              >
+                <li>Terrassement pour maison individuelle</li>
+                <li>Terrassement piscine</li>
+                <li>Travaux de VRD (Voirie et Réseaux Divers)</li>
+                <li>Excavation et déblaiement</li>
+                <li>Nivellement et mise à niveau du terrain</li>
+              </ul>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={300}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Nos prestations de terrassement" />
-            <ul className={`list-disc pl-6 space-y-2 ${styleParagraphe}`}>
-              <li>Terrassement pour maison individuelle</li>
-              <li>Terrassement piscine</li>
-              <li>Travaux de VRD (Voirie et Réseaux Divers)</li>
-              <li>Excavation et déblaiement</li>
-              <li>Nivellement et mise à niveau du terrain</li>
-            </ul>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Pourquoi choisir notre entreprise ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                Nous disposons d&apos;un matériel professionnel performant et
+                d&apos;une équipe expérimentée capable de s&apos;adapter à tous
+                types de terrains. Nous garantissons un travail précis, rapide
+                et conforme aux normes en vigueur.
+              </p>
+            </div>
+            <img
+              src="/images/banners/engin-4.jpg"
+              alt="Equipe professionnelle"
+              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+            />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={400}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Pourquoi choisir notre entreprise ?" />
-            <p className={styleParagraphe}>
-              Nous disposons d&apos;un matériel professionnel performant et
-              d&apos;une équipe expérimentée capable de s&apos;adapter à tous
-              types de terrains. Nous garantissons un travail précis, rapide et
-              conforme aux normes en vigueur.
-            </p>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection delay={500}>
-          <section className="prose max-w-none animate-fade-in">
+          <div className="bg-gradient-to-r from-[#fbbf24]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8">
             <TitleH2 title="Nos zones d'interventions" />
-            <p className={styleParagraphe}>
+            <p className={styleParagraphe + " text-gray-800"}>
               Nous intervenons dans de nombreuses communes du Var et des
               Alpes-Maritimes :
             </p>
-            <section className="rounded-xl mt-14 animate-fade-in">
+            <section className="rounded-xl mt-8 animate-fade-in">
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {cities.map((city, idx) => (
-                  <AnimatedSection key={city.slug} delay={600 + idx * 60}>
+                  <AnimatedSection key={city.slug} delay={500 + idx * 60}>
                     <li>
                       <Link
                         href={`/services/terrassement/${city.slug}`}
@@ -114,13 +133,12 @@ export default function TerrassementPage() {
                 ))}
               </ul>
             </section>
-          </section>
+          </div>
         </AnimatedSection>
       </div>
     </main>
   );
 }
-
 
 function TitleH2({ title }: { title: string }) {
   return (

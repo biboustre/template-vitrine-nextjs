@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { cities } from "../../../data/cities";
 import { generateServiceText } from "../../../lib/seo";
@@ -7,7 +6,8 @@ import SeoInternalLinks from "@/app/components/seo/SeoInternalLinks";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import ServiceSchema from "@/app/components/seo/ServiceShema";
-import GeoSchema from "@/app/components/seo/geoSchema";
+import GeoSchema from "../../../components/seo/GeoSchema";
+import AnimatedSection from "@/app/components/ui/animations/AnimatedSection";
 
 type PageProps = {
   params: Promise<{
@@ -16,7 +16,7 @@ type PageProps = {
 };
 
 export async function generateMetadata({ params }: PageProps) {
-   const { ville } = await params;
+  const { ville } = await params;
   const slug = decodeURIComponent(ville).toLowerCase();
   const city = cities.find((c) => c.slug === slug);
 
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function TerrassementVillePage({ params }: PageProps) {
   // ⚡ "await" si params est une Promise
-  const { ville } = await params; 
+  const { ville } = await params;
   const slug = decodeURIComponent(ville).toLowerCase();
 
   if (!slug) return notFound();
@@ -46,40 +46,40 @@ export default async function TerrassementVillePage({ params }: PageProps) {
 
   const breadcrumbs = [
     { label: "Terrassement", href: "/services/terrassement" },
-    { label: `Terrassement à ${city.name}`, href: `/services/terrassement/${city.slug}` },
+    {
+      label: `Terrassement à ${city.name}`,
+      href: `/services/terrassement/${city.slug}`,
+    },
   ];
 
   return (
     <main className="container mx-auto px-4 py-16">
       <BreadcrumbSchema items={breadcrumbs} />
-      <ServiceSchema service="Terrassement" city={{ name: city.name, department: city.department }} />
+      <ServiceSchema
+        service="Terrassement"
+        city={{ name: city.name, department: city.department }}
+      />
       <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <h1 className="text-4xl font-bold mb-6">
-        Terrassement à {city.name} ({city.department})
-      </h1>
-
-      <article className="prose max-w-none">
+      <div className="flex flex-col gap-8 text-slate-50">
+        <AnimatedSection delay={0}>
+          <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
+            Terrassement à {city.name} ({city.department})
+          </h1>
+        </AnimatedSection>
         {content.split("\n").map((line, i) => (
-          <p key={i}>{line}</p>
+          <AnimatedSection key={i} delay={100 + i * 80}>
+            <p className="md:text-xl 2xl:text-2xl animate-fade-in">{line}</p>
+          </AnimatedSection>
         ))}
-      </article>
-
-      <SeoInternalLinks service="terrassement" city={{ name: city.name, slug: city.slug }} />
-
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Nos interventions locales</h2>
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {cities.map((c) => (
-            <li key={c.slug}>
-              <Link href={`/services/terrassement/${c.slug}`}>
-                Terrassement à {c.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <AnimatedSection delay={content.split("\n").length * 80 + 200}>
+          <SeoInternalLinks
+            service="terrassement"
+            city={{ name: city.name, slug: city.slug }}
+          />
+        </AnimatedSection>
+      </div>
     </main>
   );
 }

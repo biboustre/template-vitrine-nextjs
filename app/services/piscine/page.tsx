@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cities } from "../../data/cities";
 import ServiceSchema from "@/app/components/seo/ServiceShema";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
@@ -23,61 +24,71 @@ export default function PiscinePage() {
     <main className="container mx-auto px-4 py-16">
       <BreadcrumbSchema items={breadcrumbs} />
       <Breadcrumbs items={breadcrumbs} />
-
       <ServiceSchema
         service="Terrassement piscine"
         city={{ name: "Var & Alpes-Maritimes", department: "PACA" }}
       />
-
-      <div className="flex flex-col gap-8 text-slate-50">
+      <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
-            Terrassement piscine – Préparation de terrain dans le Var et les Alpes-Maritimes
-          </h1>
+          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <Image width={400} height={300 } src="/images/banners/engin-1.jpg"  alt="Terrassement piscine" className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72" />
+            <div>
+              <h1 className="text-4xl text-[#0e7490] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+                Terrassement piscine – Préparation de terrain dans le Var et les Alpes-Maritimes
+              </h1>
+              <p className="text-lg text-gray-800 font-medium">Votre projet piscine clé en main, avec une préparation de terrain optimale et un accompagnement expert.</p>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <section className="prose max-w-none text-lg animate-fade-in">
-            <p className={styleParagraphe}>
-              Le terrassement piscine est une étape essentielle pour garantir la stabilité,
-              la longévité et la sécurité de votre bassin. Nous réalisons tous les travaux
-              préparatoires nécessaires avant la construction de votre piscine.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Pourquoi le terrassement piscine est essentiel ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                Une préparation de terrain rigoureuse permet d&apos;éviter les affaissements, infiltrations et désordres structurels. Chaque chantier est étudié afin d&apos;adapter la méthode au type de sol rencontré.
+              </p>
+            </div>
+            <Image width={400} height={300 } src="/images/banners/engin-2.jpg" alt="Préparation terrain piscine" className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56" />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Pourquoi le terrassement piscine est essentiel ?" />
-            <p className={styleParagraphe}>
-              Une préparation de terrain rigoureuse permet d&apos;éviter les affaissements,
-              infiltrations et désordres structurels. Chaque chantier est étudié
-              afin d&apos;adapter la méthode au type de sol rencontré.
-            </p>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <Image width={400} height={300 } src="/images/banners/engin-3.jpg" alt="Prestations piscine" className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56 order-2 md:order-1" />
+            <div className="flex-1 order-1 md:order-2">
+              <TitleH2 title="Nos prestations piscine" />
+              <ul className={`list-disc pl-6 space-y-2 ${styleParagraphe} text-gray-700`}>
+                <li>Implantation et traçage</li>
+                <li>Fouille piscine</li>
+                <li>Excavation et déblaiement</li>
+                <li>Nivellement du terrain</li>
+                <li>Création des réseaux</li>
+                <li>Remblaiement et finition</li>
+              </ul>
+            </div>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={300}>
-          <section className="prose max-w-none animate-fade-in">
-            <TitleH2 title="Nos prestations piscine" />
-            <ul className={`list-disc pl-6 space-y-2 ${styleParagraphe}`}>
-              <li>Implantation et traçage</li>
-              <li>Fouille piscine</li>
-              <li>Excavation et déblaiement</li>
-              <li>Nivellement du terrain</li>
-              <li>Création des réseaux</li>
-              <li>Remblaiement et finition</li>
-            </ul>
-          </section>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <TitleH2 title="Pourquoi choisir notre entreprise ?" />
+              <p className={styleParagraphe + " text-gray-700"}>
+                Nous disposons d&apos;un savoir-faire reconnu et d&apos;équipements modernes permettant d&apos;intervenir rapidement, efficacement et dans le strict respect de la réglementation en vigueur.
+              </p>
+            </div>
+            <Image width={400} height={300 } src="/images/banners/engin-3.jpg" alt="Equipe piscine" className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56" />
+          </div>
         </AnimatedSection>
 
         <AnimatedSection delay={400}>
-          <section className="prose max-w-none animate-fade-in">
+          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8">
             <TitleH2 title="Nos zones d'interventions" />
-            <p className={styleParagraphe}>
+            <p className={styleParagraphe + " text-gray-800"}>
               Nous intervenons dans de nombreuses communes du Var et des Alpes-Maritimes :
             </p>
-            <section className="rounded-xl mt-14 animate-fade-in">
+            <section className="rounded-xl mt-8 animate-fade-in">
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {cities.map((city, idx) => (
                   <AnimatedSection key={city.slug} delay={500 + idx * 60}>
@@ -94,7 +105,7 @@ export default function PiscinePage() {
                 ))}
               </ul>
             </section>
-          </section>
+          </div>
         </AnimatedSection>
       </div>
     </main>
