@@ -40,7 +40,7 @@ export default function PiscinePage() {
               className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
             />
             <div>
-              <h1 className="text-4xl text-[#0e7490] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
                 Terrassement piscine – Préparation de terrain dans le Var et les
                 Alpes-Maritimes
               </h1>
