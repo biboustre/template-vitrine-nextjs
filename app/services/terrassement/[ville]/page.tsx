@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { cities } from "../../../data/cities";
 import { generateServiceText } from "../../../lib/seo";
 import { notFound } from "next/navigation";
@@ -62,7 +61,7 @@ export default async function TerrassementVillePage({ params }: PageProps) {
       <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="flex flex-col gap-8 text-slate-50">
+      <section className="flex flex-col gap-4 text-slate-50">
         <AnimatedSection delay={0}>
           <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
             Terrassement à {city.name} ({city.department})
@@ -79,48 +78,7 @@ export default async function TerrassementVillePage({ params }: PageProps) {
             city={{ name: city.name, slug: city.slug }}
           />
         </AnimatedSection>
-      </div>
+      </section>
     </main>
   );
-}
-
-{
-  /* <section className="mt-16">
-        <h2 className="text-2xl font-bold mb-4">Nos services à {city.name}</h2>
-
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <Link href={`/services/assainissement/${city.slug}`}>
-              Assainissement à {city.name}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/services/piscine/${city.slug}`}>
-              Piscine à {city.name}
-            </Link>
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold mb-4">
-          Terrassement dans les villes voisines
-        </h2>
-
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {cities
-            .filter((c) => c.slug !== city.slug)
-            .slice(0, 6)
-            .map((c) => (
-              <li key={c.slug}>
-                <Link
-                  href={`/services/terrassement/${c.slug}`}
-                  className="text-blue-600 hover:underline"
-                >
-                  Terrassement à {c.name}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </section> */
 }
