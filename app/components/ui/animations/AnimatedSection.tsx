@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 // Animation component
 import { useRef, useEffect, useState } from "react";
@@ -8,9 +8,14 @@ import { ReactNode } from "react";
 interface AnimatedSectionProps {
   children: ReactNode;
   delay?: number;
+  className?: string;
 }
 
-export default function AnimatedSection({ children, delay = 0 }: AnimatedSectionProps) {
+export default function AnimatedSection({
+  children,
+  delay = 0,
+  className,
+}: AnimatedSectionProps) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -31,6 +36,7 @@ export default function AnimatedSection({ children, delay = 0 }: AnimatedSection
   return (
     <section
       ref={ref}
+      className={`${className}`}
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "none" : "translateY(40px)",

@@ -3,21 +3,24 @@ import { motion } from "framer-motion";
 import HeroImages from "./HeroImages";
 import Button from "../../ui/Button";
 import TitleH2 from "../../ui/TitleH1";
+import AnimatedSection from "../../ui/animations/AnimatedSection";
 
 export default function HeroSection() {
   return (
-    <section className={`relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden}`}>
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+    <section
+      className={`relative flex flex-col items-center justify-center py-16 px-4 text-center overflow-hidden}`}
+    >
+      <section
         className="z-10 flex flex-col items-center justify-center"
       >
         <TitleH2
           className=" md:max-w-5xl mb-12 tracking-tight"
           title="Entreprise de terrassement à Nice et dans les Alpes-Maritimes"
         />
-        <p className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto">
+        <AnimatedSection
+          delay={200}
+          className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto"
+        >
           TP Terrassement Pro est une entreprise spécialisée dans les travaux de
           terrassement, VRD, assainissement, fondations et terrassement de
           piscines à Nice et dans l&apos;ensemble des Alpes-Maritimes. Nous
@@ -31,11 +34,11 @@ export default function HeroSection() {
             Trinité, Drap, Saint-Laurent-du-Var ainsi que dans l&apos;ensemble
             des villages de l&apos;arrière-pays niçois.
           </span>
-        </p>
+        </AnimatedSection>
         <Button href="/contact" className="my-10">
           Demander un devis
         </Button>
-      </motion.section>
+      </section>
       <motion.section
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{ opacity: 1, scale: 1 }}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import TitleH1 from "../../ui/TitleH1";
+import AnimatedSection from "../../ui/animations/AnimatedSection";
 
 export default function ZoneIntervention() {
   const links = [
@@ -54,19 +55,24 @@ export default function ZoneIntervention() {
     },
   ];
 
-  const bgGradient = "bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-900 dark:to-gray-700";  
-
+  const bgGradient =
+    "bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-900 dark:to-gray-700";
 
   return (
-    <section className={`flex flex-col items-center gap-6 py-16 px-4 ${bgGradient}`}>
+    <section
+      className={`flex flex-col items-center gap-6 py-16 px-4 ${bgGradient}`}
+    >
       <TitleH1 className="text-center" title="Zone d'intervention" />
-      <p className="text-xl text-center mb-6 max-w-3xl mx-auto 2xl:text-2xl">
-        Nous intervenons dans le secteur des Alpes-Maritimes et du Var :
-        Nice, Grasse, Canne, Carros, Seranon, Saint-Laurent-du-Var
-        ainsi que dans les villages de l&apos;arrière-pays niçois.
-      </p>
+      <AnimatedSection
+        delay={200}
+        className="text-xl text-center mb-6 max-w-3xl mx-auto 2xl:text-2xl"
+      >
+        Nous intervenons dans le secteur des Alpes-Maritimes et du Var : Nice,
+        Grasse, Canne, Carros, Seranon, Saint-Laurent-du-Var ainsi que dans les
+        villages de l&apos;arrière-pays niçois.
+      </AnimatedSection>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <AnimatedSection delay={400} className="flex flex-wrap justify-center gap-4">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -76,7 +82,7 @@ export default function ZoneIntervention() {
             {link.label}
           </Link>
         ))}
-      </div>
+      </AnimatedSection>
     </section>
   );
 }

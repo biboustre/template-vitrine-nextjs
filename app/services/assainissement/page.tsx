@@ -4,6 +4,7 @@ import ServiceSchema from "@/app/components/seo/ServiceShema";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import AnimatedSection from "@/app/components/ui/animations/AnimatedSection";
+import Image from "next/image";
 
 export const metadata = {
   title:
@@ -31,11 +32,13 @@ export default function AssainissementPage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
-            <img
-              src="/images/banners/assainissement-1.jpg"
+          <div className="bg-gradient-to-r from-[#f8c538]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <Image
+              src="/images/banners/engin-1.jpg"
               alt="Assainissement professionnel"
               className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
+              width={400}
+              height={300}
             />
             <div>
               <h1 className="text-4xl text-[#0e7490] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
@@ -61,20 +64,24 @@ export default function AssainissementPage() {
                 normes sanitaires et environnementales.
               </p>
             </div>
-            <img
-              src="/images/banners/assainissement-2.jpg"
+            <Image
+              src="/images/banners/engin-2.jpg"
               alt="Travaux d'assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+              width={400}
+              height={300}
             />
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={200}>
           <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
-            <img
-              src="/images/banners/assainissement-3.jpg"
+            <Image
+              src="/images/banners/engin-3.jpg"
               alt="Prestations assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56 order-2 md:order-1"
+              width={400}
+              height={300}
             />
             <div className="flex-1 order-1 md:order-2">
               <TitleH2 title="Nos prestations d'assainissement" />
@@ -103,10 +110,12 @@ export default function AssainissementPage() {
                 réglementation en vigueur.
               </p>
             </div>
-            <img
-              src="/images/banners/assainissement-4.jpg"
+            <Image
+              src="/images/banners/engin-2.jpg"
               alt="Equipe assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+              width={400}
+              height={300}
             />
           </div>
         </AnimatedSection>
