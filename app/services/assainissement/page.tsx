@@ -32,7 +32,7 @@ export default function AssainissementPage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-gradient-to-r from-[#f8c538]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
               src="/images/banners/engin-1.jpg"
               alt="Assainissement professionnel"
@@ -41,7 +41,7 @@ export default function AssainissementPage() {
               height={300}
             />
             <div>
-              <h1 className="text-4xl text-[#0e7490] md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
                 Entreprise d&apos;assainissement – Travaux conformes aux normes
                 dans le Var et les Alpes-Maritimes
               </h1>
@@ -121,9 +121,9 @@ export default function AssainissementPage() {
         </AnimatedSection>
 
         <AnimatedSection delay={400}>
-          <div className="bg-gradient-to-r from-[#38bdf8]/90 to-[#f3f4f6] rounded-2xl shadow-xl p-8">
+          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8">
             <TitleH2 title="Nos zones d'interventions" />
-            <p className={styleParagraphe + " text-gray-800"}>
+            <p className="text-xl md:text-3xl 2xl:text-4xl text-white font-extrabold">
               Nous intervenons dans de nombreuses communes du Var et des
               Alpes-Maritimes :
             </p>
@@ -134,7 +134,7 @@ export default function AssainissementPage() {
                     <li>
                       <Link
                         href={`/services/assainissement/${city.slug}`}
-                        className="block px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-400 transition-colors flex items-center"
+                        className="px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-400 transition-colors flex items-center"
                       >
                         Assainissement à {city.name}
                         <span className="ml-2">→</span>
@@ -153,7 +153,7 @@ export default function AssainissementPage() {
 
 function TitleH2({ title }: { title: string }) {
   return (
-    <h2 className="text-2xl font-semibold text-[#fbbf24] mb-2 animate-fade-in">
+    <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-bold text-[#fbbf24] mb-2 animate-fade-in">
       {title}
     </h2>
   );

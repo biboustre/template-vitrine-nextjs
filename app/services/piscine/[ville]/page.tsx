@@ -62,11 +62,11 @@ export default async function PiscineVillePage({ params }: PageProps) {
           </h1>
         </AnimatedSection>
         {content.split("\n").map((line, i) => (
-          <AnimatedSection key={i} delay={100 + i * 80}>
+          <AnimatedSection key={i} delay={100 + i * 40}>
             <p className="md:text-xl 2xl:text-2xl animate-fade-in">{line}</p>
           </AnimatedSection>
         ))}
-        <AnimatedSection delay={content.split("\n").length * 80 + 200}>
+        <AnimatedSection delay={content.split("\n").length * 40 + 200}>
           <SeoInternalLinks
             service="piscine"
             city={{

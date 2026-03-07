@@ -31,7 +31,7 @@ export default function TerrassementPage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center      gap-8">
+          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
               width={400}
               height={300}
@@ -40,7 +40,7 @@ export default function TerrassementPage() {
               className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
             />
             <div>
-              <h1 className="text-4xl text-white md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg tracking-tight animate-fade-in">
                 Entreprise de terrassement – Travaux professionnels dans le Var
                 et les Alpes-Maritimes
               </h1>
