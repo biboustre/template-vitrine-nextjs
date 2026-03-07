@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ZonesInterventionPage() {
   return (
     <main className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-6">
+      <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
         Zones d&apos;intervention – Terrassement & Travaux Publics
       </h1>
 
@@ -17,7 +17,7 @@ export default function ZonesInterventionPage() {
       <InteractiveMap />
 
       <section className="mt-16">
-        <h2 className="text-2xl font-semibold mb-6">
+        <h2 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-10 drop-shadow-lg tracking-tight animate-fade-in">
           Nos zones d’intervention
         </h2>
 
@@ -26,7 +26,7 @@ export default function ZonesInterventionPage() {
             <li key={city.slug}>
               <Link
                 href={`/services/terrassement/${city.slug}`}
-                className="text-blue-600 hover:underline"
+                className="block px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-200 transition-colors"
               >
                 Terrassement à {city.name}
               </Link>

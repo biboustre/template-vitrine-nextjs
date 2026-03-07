@@ -59,13 +59,13 @@ export default function SeoFooter() {
         <div>
           <h3 className="font-bold mb-4 text-2xl 2xl:text-3xl">Prestations locales</h3>
           <ul className="space-y-2 2xl:text-lg">
-            {cities.slice(0, 6).map(city => (
+            {cities.map(city => (
               <li key={city.slug}>
                 <Link
                   href={`/services/assainissement/${city.slug}`}
                   className="text-base hover:text-slate-200"
                 >
-                  Assainissement à {city.name}
+                  Terrassement à {city.name}
                 </Link>
               </li>
             ))}

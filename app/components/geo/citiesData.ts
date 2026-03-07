@@ -88,12 +88,12 @@ export const cities: City[] = [
     department: "Alpes-Maritimes",
     region: "Provence-Alpes-Côte d’Azur",
   },
-  {
-    name: "La Trinité",
-    slug: "la-trinite",
-    lat: 43.7406,
-    lng: 7.3143,
-    department: "Alpes-Maritimes",
-    region: "Provence-Alpes-Côte d’Azur",
-  },
+  // {
+  //   name: "La Trinité",
+  //   slug: "la-trinite",
+  //   lat: 43.7406,
+  //   lng: 7.3143,
+  //   department: "Alpes-Maritimes",
+  //   region: "Provence-Alpes-Côte d’Azur",
+  // },
 ];
