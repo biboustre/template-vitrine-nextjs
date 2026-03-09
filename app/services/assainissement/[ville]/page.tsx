@@ -54,7 +54,7 @@ export default async function AssainissementVillePage({ params }: PageProps) {
       <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="flex flex-col gap-8 text-slate-50">
+      <div className="flex flex-col gap-4 text-slate-50">
         <AnimatedSection delay={0}>
           <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
             Assainissement à {city.name} ({city.department})
