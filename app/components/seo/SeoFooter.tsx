@@ -9,14 +9,14 @@ const SERVICES = [
 
 export default function SeoFooter() {
   return (
-    <footer className="bg-primary  mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-primary mt-24">
+      <section className="px-20 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Bloc présentation */}
         <div>
-          <h3 className="font-bold text-lg mb-4">
+          <h3 className="font-bold text-lg mb-4 2xl:text-3xl">
             Entreprise de TP & Assainissement
           </h3>
-          <p className="2xl:text-lg leading-relaxed">
+          <p className="2xl:text-lg leading-relaxed max-w-md">
             Spécialiste des travaux de terrassement, assainissement et piscines
             dans le Var (83) et les Alpes-Maritimes. Intervention rapide dans
             plus de {cities.length} communes.
@@ -64,12 +64,12 @@ export default function SeoFooter() {
           <h3 className="font-bold mb-4 text-2xl 2xl:text-3xl">
             Prestations locales
           </h3>
-          <ul className="space-y-2 2xl:text-lg">
+          <ul className="space-y-2">
             {cities.map((city) => (
               <li key={city.slug}>
                 <Link
                   href={`/services/terrassement/${city.slug}`}
-                  className="text-base hover:text-slate-200"
+                  className="text-base 2xl:text-lg hover:text-slate-200"
                 >
                   Terrassement à {city.name}
                 </Link>
@@ -77,7 +77,7 @@ export default function SeoFooter() {
             ))}
           </ul>
         </div>
-      </div>
+      </section>
 
       <div className="border-t border-gray-800 py-4 text-center text-sm 2xl:text-base">
         © {new Date().getFullYear()} – Tous droits réservés – Travaux publics &

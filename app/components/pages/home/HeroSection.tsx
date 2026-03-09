@@ -19,7 +19,7 @@ export default function HeroSection() {
         />
         <AnimatedSection
           delay={200}
-          className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-4 max-w-2xl mx-auto"
+          className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-4 max-w-4xl 2xl:max-w-5xl mx-auto"
         >
           TP Terrassement Pro est une entreprise spécialisée dans les travaux de
           terrassement, VRD, assainissement, fondations et terrassement de

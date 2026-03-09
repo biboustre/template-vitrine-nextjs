@@ -8,11 +8,18 @@ import L from "leaflet";
 
 const icon = new L.Icon({
   iconUrl: "/marker-icon.png",
+  iconRetinaUrl: "/marker-icon-2x.png",
+  shadowUrl: "/marker-shadow.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
 });
 
 export default function InteractiveMap() {
+
+
+
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg">
       <MapContainer

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { cities } from "../../data/cities";
 
+import { FiMail } from "react-icons/fi";
+
 const SERVICES = [
   { key: "terrassement", label: "Terrassement" },
   { key: "assainissement", label: "Assainissement" },
@@ -15,7 +17,7 @@ export default function MainMenu() {
 
   return (
     <nav className=" w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
-      <section className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl">
           TP & Assainissement
@@ -24,7 +26,9 @@ export default function MainMenu() {
         {/* Menu principal */}
         <ul className="flex gap-8 items-center">
           <li>
-            <Link href="/">Accueil</Link>
+            <Link href="/" className="uppercase font-bold">
+              Accueil
+            </Link>
           </li>
 
           {SERVICES.map((service) => (
@@ -36,7 +40,7 @@ export default function MainMenu() {
             >
               <Link
                 href={`/services/${service.key}`}
-                className="cursor-pointer"
+                className="cursor-pointer uppercase font-bold"
               >
                 {service.label}
               </Link>
@@ -59,11 +63,15 @@ export default function MainMenu() {
           ))}
 
           <li>
-            <Link href="/zones-d-intervention">Zones d&apos;intervention</Link>
+            <Link href="/zones-d-intervention" className="uppercase font-bold">
+              Zones d&apos;intervention
+            </Link>
           </li>
 
           <li>
-            <Link href="/contact">Contact</Link>
+           <Link href="/contact" aria-label="Contact">
+  <FiMail size={22} />
+</Link>
           </li>
         </ul>
       </section>

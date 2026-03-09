@@ -10,7 +10,7 @@ export type BannerConfig = {
 
 export const bannerConfig: Record<string, BannerConfig> = {
   "/": {
-    title: "Bienvenue chez Entreprise Bertrand",
+    title: "Bienvenue chez Bertrand Solutions Terrassement",
     subtitle:
       "Artisan de confiance pour tous vos travaux de terrassement et rénovation en région paca",
     image: "/images/banners/engin-3.jpg",
