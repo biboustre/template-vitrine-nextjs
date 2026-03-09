@@ -1,4 +1,5 @@
-import InteractiveMap from "@/app/components/geo/InteractiveMap";
+import dynamic from "next/dynamic";
+const InteractiveMap = dynamic(() => import("@/app/components/geo/InteractiveMap"), { ssr: false });
 import { cities } from "@/app/components/geo/citiesData";
 import Link from "next/link";
 
