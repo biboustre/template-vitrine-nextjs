@@ -19,7 +19,7 @@ export default function Banner() {
     <section
       className="
         relative w-full
-        h-[70vh] min-h-[420px]
+        h-[100vh] min-h-[420px]
         md:h-[70vh] md:min-h-[520px]
         lg:h-[95vh]
       "
@@ -69,9 +69,7 @@ export default function Banner() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             >
-              <Button href={banner.cta.href}>
-                {banner.cta.label}
-              </Button>
+              <Button href={banner.cta.href}>{banner.cta.label}</Button>
             </motion.section>
           )}
         </section>

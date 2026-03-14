@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { cities } from "../../data/cities";
+import HamburgerMenu from "../layout/HamburgerMenu";
 
 import { FiMail } from "react-icons/fi";
 
@@ -16,15 +17,15 @@ export default function MainMenu() {
   const [openService, setOpenService] = useState<string | null>(null);
 
   return (
-    <nav className=" w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
+    <nav className="w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl">
           TP & Assainissement
         </Link>
 
-        {/* Menu principal */}
-        <ul className="flex gap-8 items-center">
+        {/* Menu principal desktop/tablette */}
+        <ul className="hidden lg:flex gap-8 items-center">
           <li>
             <Link href="/" className="uppercase font-bold">
               Accueil
@@ -69,11 +70,16 @@ export default function MainMenu() {
           </li>
 
           <li>
-           <Link href="/contact" aria-label="Contact">
-  <FiMail size={22} />
-</Link>
+            <Link href="/contact" aria-label="Contact">
+              <FiMail size={22} />
+            </Link>
           </li>
         </ul>
+
+        {/* Menu hamburger mobile/tablette */}
+        <div className="block lg:hidden">
+          <HamburgerMenu />
+        </div>
       </section>
     </nav>
   );
