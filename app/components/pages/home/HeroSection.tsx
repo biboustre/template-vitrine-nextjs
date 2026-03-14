@@ -21,7 +21,7 @@ export default function HeroSection() {
           delay={200}
           className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-4 max-w-4xl 2xl:max-w-5xl mx-auto"
         >
-          TP Terrassement Pro est une entreprise spécialisée dans les travaux de
+          Bertrand solutions terrassement est une entreprise spécialisée dans les travaux de
           terrassement, VRD, assainissement, fondations et terrassement de
           piscines à Nice et dans l&apos;ensemble des Alpes-Maritimes. Nous
           accompagnons les particuliers et professionnels dans tous leurs
@@ -30,8 +30,7 @@ export default function HeroSection() {
           l&apos;arrière-pays niçois.
           <br />
           <span className="text-accent font-semibold">
-            Nous intervenons principalement à Nice, Grasse, Vence, Carros, La
-            Trinité, Drap, Saint-Laurent-du-Var ainsi que dans l&apos;ensemble
+            Nous intervenons principalement à Nice, Grasse, Séranon, Escragnolles, Saint-Auban, La Martre, Saint-Laurent-du-Var ainsi que dans l&apos;ensemble
             des villages de l&apos;arrière-pays niçois.
           </span>
         </AnimatedSection>

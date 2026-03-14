@@ -77,7 +77,7 @@ export default function ZoneIntervention() {
           <Link
             key={link.href}
             href={link.href}
-            className="px-4 py-2 bg-[#c79c2f] text-white rounded hover:bg-primary-dark transition hover:scale-90 duration-300"
+            className="px-4 py-2 bg-[#f3b926] text-white rounded hover:bg-primary-dark transition hover:scale-90 duration-300"
           >
             {link.label}
           </Link>

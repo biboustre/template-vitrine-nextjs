@@ -1,9 +1,9 @@
 import Image from "next/image";
 import AnimatedAppear from "@/app/components/ui/animations/AnimatedAppear";
 const images = [
-  { src: "/images/banners/engin-1.jpg", alt: "Terrassement 1" },
-  { src: "/images/banners/engin-2.jpg", alt: "Terrassement 2" },
-  { src: "/images/banners/engin-3.jpg", alt: "Terrassement 3" },
+  { src: "/images/banners/piscine.jpg", alt: "Terrassement 1" },
+  { src: "/images/banners/pose-canalisation.jpg", alt: "Terrassement 2" },
+  { src: "/images/banners/mini-pelle.jpg", alt: "Terrassement 3" },
 ];
 
 export default function HeroImages() {

@@ -31,6 +31,11 @@ export default function MainMenu() {
               Accueil
             </Link>
           </li>
+          <li>
+            <Link href="/about" className="uppercase font-bold">
+              À propos
+            </Link>
+          </li>
 
           {SERVICES.map((service) => (
             <li

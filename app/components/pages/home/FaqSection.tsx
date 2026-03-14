@@ -2,10 +2,19 @@
 import { motion } from "framer-motion";
 import { faqs } from "@/app/data/faqs";
 import TitleH2 from "../../ui/TitleH1";
+import Image from "next/image";
 
 export default function FaqSection() {
   return (
-    <section className="container mx-auto py-16 px-4">
+    <section className="relative mx-auto py-16 px-4 h-auto overflow-hidden">
+      <Image
+        src="/images/banners/mini-pelle.jpg"
+        alt="Questions fréquentes"
+        width={600}
+        height={400}
+        className="w-full rounded-lg shadow absolute -z-10 top-0 left-0 opacity- object-cover h-full"
+      />
+
       <TitleH2 title="Questions fréquentes" />
       <div className="max-w-2xl mx-auto mt-12">
         {faqs.map((faq, idx) => (
@@ -15,7 +24,7 @@ export default function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className="mb-4 bg-white dark:bg-gray-900 rounded-lg shadow p-4 border border-primary/10"
+            className="mb-4 bg-white dark:bg-gray-700 rounded-lg shadow p-4 border border-primary/10"
           >
             <summary className="cursor-pointer font-semibold text-primary dark:text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary">
               {faq.q}

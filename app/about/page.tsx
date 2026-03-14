@@ -16,7 +16,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-5xl font-bold dark:text-secondary text-center"
           >
-            Entreprise de Terrassement : Notre Expertise
+            Bertrand Solutions Terrassement : Notre Expertise
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export default function AboutPage() {
             transition={{ delay: 0.3, duration: 0.7 }}
             className="text-lg text-white dark:text-white max-w-2xl mx-auto text-center md:text-xl"
           >
-            Spécialistes du terrassement depuis plus de 15 ans, nous
+            Spécialistes du terrassement depuis plus de 10 ans, nous
             accompagnons particuliers et professionnels dans tous leurs projets
             de préparation de terrain, d&apos;excavation, d&apos;assainissement
             et d&apos;aménagement extérieur. Notre équipe expérimentée
@@ -47,22 +47,22 @@ export default function AboutPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           >
             <ValueCard
-              icon={<FaHardHat />}
+              icon={<FaHardHat className="text-orange-500" />}
               title="Expertise & Savoir-faire"
               description="Des professionnels qualifiés, formés aux dernières techniques de terrassement et d’aménagement."
             />
             <ValueCard
-              icon={<FaLeaf />}
+              icon={<FaLeaf className="text-green-500" />}
               title="Respect de l’environnement"
               description="Des méthodes responsables et des matériaux adaptés pour préserver votre terrain et la nature."
             />
             <ValueCard
-              icon={<FaHandshake />}
+              icon={<FaHandshake className="text-blue-500" />}
               title="Accompagnement sur-mesure"
               description="Un interlocuteur unique, à l’écoute de vos besoins, pour un projet clé en main et sans surprise."
             />
             <ValueCard
-              icon={<FaTools />}
+              icon={<FaTools className="text-yellow-500" />}
               title="Matériel moderne"
               description="Un parc d’engins performant pour garantir rapidité, sécurité et qualité d’exécution."
             />
