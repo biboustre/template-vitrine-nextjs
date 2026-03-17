@@ -40,12 +40,11 @@ export default function HeroImages() {
               alt={img.alt}
               width={600}
               height={400}
-              className="w-full h-[200px] object-cover rounded-lg shadow"
+              className="w-full h-[200px] object-cover rounded-lg shadow-lg"
               priority
             />
+          </figure>
             <figcaption>
-              {/* copitlot, peut tu m'aider a faire en sorte que le lien me renvoi vers la page dédier soit piscine, sois page assainissement sois la page terrassement mais il faut que ce soit dynamique comment faire
-               */}
               <Link
                 href={img.href}
                 className="mt-5 uppercase bg-primary py-1 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-110 transition-transform "
@@ -53,7 +52,6 @@ export default function HeroImages() {
                 {img.text}
               </Link>
             </figcaption>
-          </figure>
         </AnimatedAppear>
       ))}
     </section>
