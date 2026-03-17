@@ -27,7 +27,7 @@ const images = [
 
 export default function HeroImages() {
   return (
-    <section className="flex flex-col md:flex-row gap-10 px-2 md:px-0">
+    <section className="flex flex-col md:flex-row gap-32 md:gap-10 px-2 md:px-0">
       {images.map((img, idx) => (
         <AnimatedAppear
           key={img.src}
@@ -43,7 +43,6 @@ export default function HeroImages() {
               className="w-full h-[200px] object-cover rounded-lg shadow-lg"
               priority
             />
-          </figure>
             <figcaption>
               <Link
                 href={img.href}
@@ -52,6 +51,7 @@ export default function HeroImages() {
                 {img.text}
               </Link>
             </figcaption>
+          </figure>
         </AnimatedAppear>
       ))}
     </section>

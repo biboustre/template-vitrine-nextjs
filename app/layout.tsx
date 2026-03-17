@@ -87,7 +87,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const bgGradient = "bg-gradient-to-r from-gray-400 dark:to-gray-700";
+  const bgGradient = "bg-gradient-to-r from-gray-400 to-gray-700";
   return (
     <html lang="fr">
       <head>

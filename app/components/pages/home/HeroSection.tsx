@@ -42,7 +42,7 @@ export default function HeroSection() {
       >
         <HeroImages />
       </motion.section>
-      <Button href="/contact" className="my-10 ">
+      <Button href="/contact" className="mt-32 md:my-10 ">
         Demander un devis
       </Button>
     </section>
