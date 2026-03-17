@@ -19,13 +19,13 @@ export default function ValueCard({
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
       whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-      className="flex flex-col items-center bg-white dark:bg-gray-600 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow cursor-pointer"
+      className="flex flex-col items-center bg-gray-600 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition-shadow cursor-pointer"
     >
       <div className="text-4xl mb-3 text-primary">{icon}</div>
       <h3 className="font-semibold text-lg mb-2 text-secondary dark:text-white">
         {title}
       </h3>
-      <p className="text-gray-600 dark:text-gray-300 text-sm">{description}</p>
+      <p className="text-gray-300 text-sm">{description}</p>
     </motion.article>
   );
 }
