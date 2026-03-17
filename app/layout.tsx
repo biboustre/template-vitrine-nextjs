@@ -160,7 +160,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${bgGradient}  dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${bgGradient}  text-white`}
       >
         <DarkModeProvider>
           <Header />
