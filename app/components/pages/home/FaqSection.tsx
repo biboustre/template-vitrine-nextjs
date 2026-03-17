@@ -5,6 +5,8 @@ import TitleH2 from "../../ui/TitleH1";
 import Image from "next/image";
 
 export default function FaqSection() {
+  const bgGradient = "bg-gradient-to-r from-gray-500 to-gray-700/50";
+
   return (
     <section className="relative mx-auto py-16 px-4 h-auto overflow-hidden">
       <Image
@@ -24,7 +26,7 @@ export default function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className="mb-4 bg-white dark:bg-gray-700 rounded-lg shadow p-4 border border-primary/10"
+            className={`mb-4 rounded-lg shadow p-4 border border-primary/10 ${bgGradient}`}
           >
             <summary className="cursor-pointer font-semibold text-primary dark:text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary">
               {faq.q}

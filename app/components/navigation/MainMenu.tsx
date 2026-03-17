@@ -21,7 +21,7 @@ export default function MainMenu() {
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl">
-          TP & Assainissement
+          BS&apos;TERRASSEMENT
         </Link>
 
         {/* Menu principal desktop/tablette */}

@@ -21,7 +21,7 @@ export default function Banner() {
         relative w-full
         h-[100vh] min-h-[420px]
         md:h-[70vh] md:min-h-[520px]
-        lg:h-[95vh]
+        lg:h-[98vh]
       "
     >
       {/* Image de fond dynamique selon la page */}

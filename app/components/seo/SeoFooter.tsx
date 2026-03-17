@@ -13,7 +13,7 @@ export default function SeoFooter() {
       <section className="px-20 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Bloc présentation */}
         <div>
-          <h3 className="font-bold text-lg mb-4 2xl:text-3xl">
+          <h3 className="font-bold text-lg mb-4 md:text-2xl 2xl:text-3xl">
             Entreprise de TP & Assainissement
           </h3>
           <p className="2xl:text-lg leading-relaxed max-w-md">

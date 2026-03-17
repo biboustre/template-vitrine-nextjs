@@ -15,7 +15,6 @@ export const metadata = {
 
 export default function AssainissementPage() {
   const breadcrumbs = [
-    { label: "Accueil", href: "/" },
     { label: "Assainissement", href: "/services/assainissement" },
   ];
 
@@ -34,9 +33,9 @@ export default function AssainissementPage() {
         <AnimatedSection delay={0}>
           <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
-              src="/images/banners/engin-1.jpg"
+              src="/images/banners/pose-canalisation.jpg"
               alt="Assainissement professionnel"
-              className="w-full md:w-1/3 rounded-xl shadow-lg object-cover h-56 md:h-72"
+              className="w-full rounded-xl shadow-lg object-cover h-56 md:h-72"
               width={400}
               height={300}
             />
@@ -45,7 +44,7 @@ export default function AssainissementPage() {
                 Entreprise d&apos;assainissement – Travaux conformes aux normes
                 dans le Var et les Alpes-Maritimes
               </h1>
-              <p className="text-lg text-gray-800 font-medium">
+              <p className="text-lg text-gray-700 font-medium">
                 Des solutions d&apos;assainissement fiables, conformes et
                 durables pour tous vos besoins, particuliers et professionnels.
               </p>
@@ -65,7 +64,7 @@ export default function AssainissementPage() {
               </p>
             </div>
             <Image
-              src="/images/banners/engin-2.jpg"
+              src="/images/banners/mini-pelle.jpg"
               alt="Travaux d'assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
               width={400}
@@ -77,7 +76,7 @@ export default function AssainissementPage() {
         <AnimatedSection delay={200}>
           <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
             <Image
-              src="/images/banners/engin-3.jpg"
+              src="/images/banners/mini-pelle-3.jpg"
               alt="Prestations assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56 order-2 md:order-1"
               width={400}
@@ -111,7 +110,7 @@ export default function AssainissementPage() {
               </p>
             </div>
             <Image
-              src="/images/banners/engin-2.jpg"
+              src="/images/banners/pose-canalisation.jpg"
               alt="Equipe assainissement"
               className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
               width={400}
