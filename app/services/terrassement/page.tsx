@@ -31,7 +31,7 @@ export default function TerrassementPage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+          <figure className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
               width={400}
               height={300}
@@ -49,7 +49,7 @@ export default function TerrassementPage() {
                 avec un accompagnement de A à Z.
               </p>
             </div>
-          </div>
+          </figure>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>

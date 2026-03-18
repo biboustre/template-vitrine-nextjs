@@ -31,7 +31,7 @@ export default function HeroImages() {
       {images.map((img, idx) => (
         <AnimatedAppear
           key={img.src}
-          delay={idx * 150}
+          delay={idx * 350}
           className="flex-1 relative"
         >
           <figure className="flex-1 relative h-48 md:h-72">

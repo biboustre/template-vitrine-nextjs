@@ -5,7 +5,7 @@ import TitleH2 from "../../ui/TitleH1";
 import Image from "next/image";
 
 export default function FaqSection() {
-  const bgGradient = "bg-gradient-to-r from-gray-500 to-gray-700/50";
+  const bgGradient = "bg-gradient-to-r from-gray-500/40 to-gray-700/20 backdrop-blur-sm";
 
   return (
     <section className="relative mx-auto py-16 px-4 h-auto overflow-hidden">
@@ -28,10 +28,10 @@ export default function FaqSection() {
             viewport={{ once: true }}
             className={`mb-4 rounded-lg shadow p-4 border border-primary/10 ${bgGradient}`}
           >
-            <summary className="cursor-pointer font-semibold text-primary dark:text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <summary className="cursor-pointer font-semibold text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary">
               {faq.q}
             </summary>
-            <p className="mt-2 text-gray-600 dark:text-gray-300">{faq.a}</p>
+            <p className="mt-2 text-white">{faq.a}</p>
           </motion.details>
         ))}
       </div>

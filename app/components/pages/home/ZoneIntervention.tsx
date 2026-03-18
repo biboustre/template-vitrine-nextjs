@@ -56,7 +56,7 @@ export default function ZoneIntervention() {
   ];
 
   const bgGradient =
-    "bg-gradient-to-r from-primary/10 to-blue-200 dark:from-gray-900 dark:to-gray-700";
+    "bg-gradient-to-r from-gray-900 to-gray-700";
 
   return (
     <section

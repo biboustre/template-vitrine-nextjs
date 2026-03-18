@@ -7,8 +7,8 @@ import Button from "../components/ui/Button";
 export default function AboutPage() {
   return (
     <main>
-      <section className="container mx-auto py-16 px-4 text-secondary">
-        <section className="flex flex-col gap-12 mb-16">
+      <section className="container mx-auto pt-16 px-4 text-secondary">
+        <section className="flex flex-col gap-12 mb-7">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function AboutPage() {
               description="Un interlocuteur unique, à l’écoute de vos besoins, pour un projet clé en main et sans surprise."
             />
             <ValueCard
-              icon={<FaTools className="text-yellow-500" />}
+              icon={<FaTools className="text-gray-500" />}
               title="Matériel moderne"
               description="Un parc d’engins performant pour garantir rapidité, sécurité et qualité d’exécution."
             />
@@ -74,7 +74,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl mx-auto mb-16"
+          className="max-w-3xl mx-auto mb-7"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">
             Notre mission
@@ -113,7 +113,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="max-w-3xl mx-auto text-center mt-32"
+          className="max-w-3xl mx-auto text-center mt-32 bg-gradient-to-r from-gray-900 to-gray-700 rounded-2xl shadow-xl p-8"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">
             Contactez-nous

@@ -21,7 +21,7 @@ export default function InteractiveMap() {
 
 
   return (
-    <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg">
+    <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-lg z-[0]">
       <MapContainer
         center={[43.5, 6.7]}
         zoom={9}

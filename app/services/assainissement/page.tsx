@@ -31,7 +31,7 @@ export default function AssainissementPage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+          <figure className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
               src="/images/banners/pose-canalisation.jpg"
               alt="Assainissement professionnel"
@@ -49,7 +49,7 @@ export default function AssainissementPage() {
                 durables pour tous vos besoins, particuliers et professionnels.
               </p>
             </div>
-          </div>
+          </figure>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>

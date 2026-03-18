@@ -30,7 +30,7 @@ export default function PiscinePage() {
       />
       <div className="flex flex-col gap-8">
         <AnimatedSection delay={0}>
-          <div className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
+          <figure className="bg-[#fbbf24] rounded-2xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
             <Image
               width={400}
               height={300}
@@ -48,7 +48,7 @@ export default function PiscinePage() {
                 terrain optimale et un accompagnement expert.
               </p>
             </div>
-          </div>
+          </figure>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>

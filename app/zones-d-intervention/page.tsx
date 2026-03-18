@@ -8,40 +8,46 @@ const InteractiveMap = dynamic(
 // import InteractiveMap from "@/app/components/geo/InteractiveMap";
 import { cities } from "@/app/components/geo/citiesData";
 import Link from "next/link";
+import AnimatedSection from "../components/ui/animations/AnimatedSection";
 
 export default function ZonesInterventionPage() {
   return (
     <main className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
-        Zones d&apos;intervention – Terrassement & Travaux Publics
-      </h1>
+      <AnimatedSection delay={0}>
+        <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
+          Zones d&apos;intervention – Terrassement & Travaux Publics
+        </h1>
 
-      <p className="mb-10 text-lg">
-        Nous intervenons rapidement dans toutes les villes suivantes pour vos
-        travaux de terrassement, VRD, assainissement et piscines.
-      </p>
+        <p className="mb-10 text-lg">
+          Nous intervenons rapidement dans toutes les villes suivantes pour vos
+          travaux de terrassement, VRD, assainissement et piscines.
+        </p>
+      </AnimatedSection>
+      <AnimatedSection delay={100}>
+        <InteractiveMap />
+      </AnimatedSection>
 
-      <InteractiveMap />
-
-      <section className="mt-16">
+      <AnimatedSection className="mt-16">
         <h2 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-10 drop-shadow-lg tracking-tight animate-fade-in">
           Nos zones d’intervention
         </h2>
 
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {cities.map((city) => (
-            <li key={city.slug}>
-              <Link
-                href={`/services/terrassement/${city.slug}`}
-                className="block px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-200 transition-colors"
-              >
-                Terrassement à {city.name}
-              <span className="ml-2 text-gray-500">→</span>
-              </Link>
-            </li>
+          {cities.map((city, idx) => (
+            <AnimatedSection key={city.slug} delay={500 + idx * 60}>
+              <li key={city.slug}>
+                <Link
+                  href={`/services/terrassement/${city.slug}`}
+                  className="block px-3 py-2 rounded-lg bg-white text-gray-900 font-medium shadow hover:bg-gray-200 transition-colors"
+                >
+                  Terrassement à {city.name}
+                  <span className="ml-2 text-gray-500">→</span>
+                </Link>
+              </li>
+            </AnimatedSection>
           ))}
         </ul>
-      </section>
+      </AnimatedSection>
     </main>
   );
 }

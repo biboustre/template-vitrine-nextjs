@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cities } from "../../data/cities";
 import HamburgerMenu from "../layout/HamburgerMenu";
 
@@ -14,10 +14,25 @@ const SERVICES = [
 ];
 
 export default function MainMenu() {
-  const [openService, setOpenService] = useState<string | null>(null);
+
+  const [openNav, setOpenNav] = useState<string | null>(null);
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const threshold = window.innerHeight / 4;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y < threshold || y < lastY) setShow(true);
+      else if (y > lastY) setShow(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="w-full fixed z-20 bg-[#fbbf24] bg-opacity-90">
+    <nav className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}>
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl">
@@ -41,8 +56,8 @@ export default function MainMenu() {
             <li
               key={service.key}
               className="relative"
-              onMouseEnter={() => setOpenService(service.key)}
-              onMouseLeave={() => setOpenService(null)}
+              onMouseEnter={() => setOpenNav(service.key)}
+              onMouseLeave={() => setOpenNav(null)}
             >
               <Link
                 href={`/services/${service.key}`}
@@ -52,7 +67,7 @@ export default function MainMenu() {
               </Link>
 
               {/* Mega menu local SEO */}
-              {openService === service.key && (
+              {openNav === service.key && (
                 <div className="absolute top-full left-0 bg-white shadow-xl border rounded-lg p-4 w-[360px] grid grid-cols-2 gap-2 z-50">
                   {cities.slice(0, 12).map((city) => (
                     <Link
