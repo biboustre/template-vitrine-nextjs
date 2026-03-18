@@ -38,15 +38,15 @@ export default function HeroImages() {
             <Image
               src={img.src}
               alt={img.alt}
-              width={600}
-              height={400}
-              className="w-full h-[200px] object-cover rounded-lg shadow-lg"
+              width={500}
+              height={300}
+              className="w-full h-[200px] object-cover rounded-lg shadow-lg md:scale-90"
               priority
             />
             <figcaption>
               <Link
                 href={img.href}
-                className="mt-5 uppercase bg-primary py-1 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-110 transition-transform "
+                className="mt-5 md:mt-3 uppercase bg-primary py-1 md:py-2 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-110 transition-transform md:scale-90"
               >
                 {img.text}
               </Link>

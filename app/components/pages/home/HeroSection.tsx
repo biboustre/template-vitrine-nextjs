@@ -17,7 +17,7 @@ export default function HeroSection() {
         />
         <AnimatedSection
           delay={200}
-          className="text-xl text-white lg:text-2xl dark:text-gray-200 mb-10 max-w-4xl 2xl:max-w-5xl mx-auto"
+          className="text-xl text-gray-200 mb-10 max-w-4xl 2xl:max-w-5xl mx-auto 2xl:text-2xl"
         >
           Bertrand solutions terrassement est une entreprise spécialisée dans
           les travaux de terrassement, VRD, assainissement, fondations et
