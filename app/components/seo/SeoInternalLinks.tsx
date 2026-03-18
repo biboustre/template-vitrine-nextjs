@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cities } from "../../data/cities";
+import AnimatedSection from "../ui/animations/AnimatedSection";
 
 type Props = {
   service: "assainissement" | "piscine" | "terrassement";
@@ -25,7 +26,8 @@ export default function SeoInternalLinks({ service, city }: Props) {
         </h2>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {SERVICES.filter((s) => s.key !== service).map((s) => (
+          {SERVICES.filter((s) => s.key !== service).map((s, idx) => (
+            <AnimatedSection key={s.key} delay={500 + idx * 60}>
             <li key={s.key}>
               <Link
                 href={`/services/${s.key}/${city.slug}`}
@@ -35,6 +37,7 @@ export default function SeoInternalLinks({ service, city }: Props) {
                 <span className="ml-2">→</span>
               </Link>
             </li>
+            </AnimatedSection>
           ))}
         </ul>
       </div>
@@ -50,7 +53,8 @@ export default function SeoInternalLinks({ service, city }: Props) {
           {cities
             .filter((c) => c.slug !== city.slug)
             .slice(0, 9)
-            .map((c) => (
+            .map((c, idx) => (
+              <AnimatedSection key={c.slug} delay={500 + idx * 60}>
               <li key={c.slug}>
                 <Link
                   href={`/services/${service}/${c.slug}`}
@@ -60,6 +64,7 @@ export default function SeoInternalLinks({ service, city }: Props) {
                   <span className="ml-2">→</span>
                 </Link>
               </li>
+              </AnimatedSection>
             ))}
         </ul>
       </div>

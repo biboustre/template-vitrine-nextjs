@@ -26,9 +26,9 @@ export default function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
-            className={`mb-4 rounded-lg shadow p-4 border border-primary/10 ${bgGradient}`}
+            className={`mb-4 rounded-lg shadow p-4 border border-primary/10  ${bgGradient}`}
           >
-            <summary className="cursor-pointer font-semibold text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary">
+            <summary className="cursor-pointer font-semibold text-white text-lg focus:outline-none focus:ring-2 focus:ring-primary ">
               {faq.q}
             </summary>
             <p className="mt-2 text-white">{faq.a}</p>
