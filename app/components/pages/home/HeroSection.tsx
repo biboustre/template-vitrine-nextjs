@@ -12,17 +12,26 @@ export default function HeroSection() {
     >
       <section className="z-10 flex flex-col items-center justify-center">
         <TitleH2
-          className=" md:max-w-5xl mb-12 tracking-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12 tracking-tight"
           title="Entreprise de terrassement à Nice et dans les Alpes-Maritimes"
         />
         <AnimatedSection
           delay={200}
           className="text-xl text-gray-200 mb-10 max-w-4xl 2xl:max-w-5xl mx-auto 2xl:text-2xl"
         >
-          Bertrand solutions terrassement est une entreprise spécialisée dans
-          les travaux de terrassement, VRD, assainissement, fondations et
-          terrassement de piscines à Nice et dans l&apos;ensemble des
-          Alpes-Maritimes. Nous accompagnons les particuliers et professionnels
+          <span className="font-bold text-[#fbbf24] uppercase">
+            Bertrand solutions terrassement
+          </span>{" "}
+          est une entreprise spécialisée dans les travaux de terrassement, VRD,
+          assainissement, fondations et terrassement de piscines à Nice et dans
+          l&apos;ensemble des Alpes-Maritimes. Nous accompagnons les{" "}
+          <span className="font-bold text-[#fbbf24] uppercase">
+            particuliers
+          </span>{" "}
+          et{" "}
+          <span className="font-bold text-[#fbbf24] uppercase">
+            professionnels{" "}
+          </span>
           dans tous leurs projets de construction, d&apos;aménagement extérieur
           et de préparation de terrain, aussi bien en zone urbaine que dans
           l&apos;arrière-pays niçois.
@@ -30,7 +39,7 @@ export default function HeroSection() {
           <span className="text-accent font-semibold">
             Nous intervenons principalement à Nice, Grasse, Séranon,
             Escragnolles, Saint-Auban, La Martre, Saint-Laurent-du-Var ainsi que
-            dans l&apos;ensemble des villages de l&apos;arrière-pays niçois.
+            dans l&apos;ensemble des villages de <span className="font-bold text-[#fbbf24] uppercase">l&apos;arrière-pays niçois</span>.
           </span>
         </AnimatedSection>
       </section>

@@ -19,7 +19,7 @@ export default function Banner() {
     <section
       className="
         relative w-full
-        h-[100vh] min-h-[420px]
+        h-[90vh] min-h-[420px]
         md:h-[70vh] md:min-h-[520px]
         lg:h-[98vh]
       "
@@ -41,7 +41,7 @@ export default function Banner() {
         <section className="container mx-auto px-4 text-center text-gray-200">
           <motion.h1
             key={pathname + banner.title}
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 2xl:text-7xl"
+            className="text-5xl md:text-5xl lg:text-6xl font-bold mb-6 2xl:text-7xl"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}

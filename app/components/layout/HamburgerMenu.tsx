@@ -25,13 +25,13 @@ export default function HamburgerMenu() {
         <span className="sr-only">Menu</span>
         <div className="w-6 h-6 flex flex-col justify-between">
           <span
-            className={`block h-0.5 w-full bg-gray-800 transition-all ${open ? "rotate-45 translate-y-2" : ""}`}
+            className={`block h-1 w-full bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""}`}
           ></span>
           <span
-            className={`block h-0.5 w-full bg-gray-800 transition-all ${open ? "opacity-0" : ""}`}
+            className={`block h-1 w-full bg-white transition-all ${open ? "opacity-0" : ""}`}
           ></span>
           <span
-            className={`block h-0.5 w-full bg-gray-800 transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block h-1 w-full bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`}
           ></span>
         </div>
       </button>
