@@ -14,7 +14,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-4xl md:text-5xl font-bold dark:text-secondary text-center"
+            className="text-4xl md:text-5xl font-extrabold dark:text-secondary text-center"
           >
             Bertrand Solutions Terrassement : Notre Expertise
           </motion.h1>

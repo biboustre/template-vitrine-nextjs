@@ -16,7 +16,7 @@ export default function HamburgerMenu() {
   const [openService, setOpenService] = useState<string | null>(null);
 
   return (
-    <div className="md:hidden">
+    <section className="">
       <button
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         onClick={() => setOpen((o) => !o)}
@@ -45,6 +45,15 @@ export default function HamburgerMenu() {
                 onClick={() => setOpen(false)}
               >
                 Accueil
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="uppercase font-bold text-gray-700 hover:text-primary transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                À propos
               </Link>
             </li>
             {SERVICES.map((service) => (
@@ -116,6 +125,6 @@ export default function HamburgerMenu() {
           </ul>
         </nav>
       )}
-    </div>
+    </section>
   );
 }

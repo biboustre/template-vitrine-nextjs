@@ -46,7 +46,7 @@ export default function HeroImages() {
             <figcaption>
               <Link
                 href={img.href}
-                className="mt-5 md:mt-3 uppercase bg-primary py-1 md:py-2 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-110 transition-transform md:scale-90"
+                className="mt-5 md:mt-3 uppercase bg-primary py-1 md:py-2 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-105 transition-transform md:scale-90"
               >
                 {img.text}
               </Link>

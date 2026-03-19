@@ -46,7 +46,7 @@ export default function Banner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="text-[#fbbf24] ">Bienvenue</span> chez <span className="md:text-[#fbbf24]">Bertrand</span> <span className="text-[#fbbf24] md:text-white">Solutions</span> Terrassement
+            <span className="text-[#fbbf24] ">Bienvenue</span> chez <span className="md:text-[#fbbf24]">Bertrand</span> <span className="text-[#fbbf24] md:text-white">Solution</span> Terrassement
           </motion.h1>
           <motion.p
             key={pathname + banner.subtitle}

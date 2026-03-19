@@ -40,7 +40,7 @@ export default function MainMenu() {
         </Link>
 
         {/* Menu principal desktop/tablette */}
-        <ul className="hidden lg:flex gap-8 items-center">
+        <ul className="hidden xl:flex gap-8 items-center">
           <li>
             <Link href="/" className="uppercase font-bold">
               Accueil
@@ -97,7 +97,7 @@ export default function MainMenu() {
         </ul>
 
         {/* Menu hamburger mobile/tablette */}
-        <div className="block lg:hidden">
+        <div className=" xl:hidden">
           <HamburgerMenu />
         </div>
       </section>

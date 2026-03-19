@@ -9,7 +9,7 @@ export const services = [
     icon: "🏗️",
     title: "Aménagement extérieur",
     description:
-      "Création dallées, parkings, accès, tranchées et plateformes. Solutions sur-mesure pour particuliers et professionnels.",
+      "Création d'allées, parkings, accès, tranchées et plateformes. Solutions sur-mesure pour particuliers et professionnels.",
   },
   {
     icon: "💧",

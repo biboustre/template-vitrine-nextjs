@@ -20,7 +20,7 @@ export default function HeroSection() {
           className="text-xl text-gray-200 mb-10 max-w-4xl 2xl:max-w-5xl mx-auto 2xl:text-2xl"
         >
           <span className="font-bold text-[#fbbf24] uppercase">
-            Bertrand solutions terrassement
+            Bertrand solution terrassement
           </span>{" "}
           est une entreprise spécialisée dans les travaux de terrassement, VRD,
           assainissement, fondations et terrassement de piscines à Nice et dans
@@ -38,8 +38,8 @@ export default function HeroSection() {
           <br />
           <span className="text-accent font-semibold">
             Nous intervenons principalement à Nice, Grasse, Séranon,
-            Escragnolles, Saint-Auban, La Martre, Saint-Laurent-du-Var ainsi que
-            dans l&apos;ensemble des villages de <span className="font-bold text-[#fbbf24] uppercase">l&apos;arrière-pays niçois</span>.
+            Escragnolles, Saint-Auban, La Martre ainsi que
+            dans l&apos;ensemble des villages de <span className="font-bold text-[#fbbf24] uppercase">l&apos;arrière-pays niçois/Grassois</span>.
           </span>
         </AnimatedSection>
       </section>

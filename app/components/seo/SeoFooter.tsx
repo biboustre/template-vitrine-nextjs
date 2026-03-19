@@ -10,7 +10,7 @@ const SERVICES = [
 export default function SeoFooter() {
   return (
     <footer className="bg-primary mt-24">
-      <section className="flex flex-col py-20 px-5 md:flex-row gap-12 md:px-10">
+      <section className="flex flex-col py-20 px-5 md:flex-row md:justify-around gap-12 md:px-10">
         {/* Bloc présentation */}
         <div>
           <h3 className="font-bold text-2xl mb-4 2xl:text-3xl">
