@@ -20,7 +20,7 @@ export default function ServicesSection() {
             },
           },
         }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 max-w-[1400px] mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12 max-w-[1400px] mx-auto"
       >
         {services.map((service, idx) => (
           <AnimatedAppear key={service.icon} delay={idx * 150} className="bg-gradient-to-r from-gray-900 to-gray-700 rounded-2xl shadow-xl p-8 flex flex-col items-center border border-primary/10 hover:scale-105 hover:shadow-2xl transition-transform duration-300">

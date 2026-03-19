@@ -27,7 +27,7 @@ const images = [
 
 export default function HeroImages() {
   return (
-    <section className="flex flex-col md:flex-row gap-32 md:gap-10 px-2 md:px-0">
+    <section className="flex flex-col md:flex-row gap-32 md:gap-0 xl:gap-10 px-2 md:px-0">
       {images.map((img, idx) => (
         <AnimatedAppear
           key={img.src}
