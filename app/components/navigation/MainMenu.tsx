@@ -6,6 +6,7 @@ import { cities } from "../../data/cities";
 import HamburgerMenu from "../layout/HamburgerMenu";
 
 import { FiMail, FiChevronDown } from "react-icons/fi";
+import Image from "next/image";
 
 const SERVICES = [
   { key: "terrassement", label: "Terrassement" },
@@ -34,10 +35,10 @@ export default function MainMenu() {
     <nav
       className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-end items-center">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl">
-          BS&apos;TERRASSEMENT
+        <Link href="/" className="inline-block absolute left-5 -top-5 font-bold text-xl">
+          <Image src="/images/transparent-logo.png" alt="Bertrand Solutions Terrassement" width={150} height={50} />
         </Link>
 
         {/* Menu principal desktop/tablette */}
@@ -87,7 +88,7 @@ export default function MainMenu() {
         </div>
       </section>
 
-      <section className="flex justify-end gap-10 pr-5 py-5 border-t border-white ">
+      <section className="flex justify-end gap-10 pr-5 py-5 border-t border-white 2xl:max-w-7xl mx-auto">
         {SERVICES.map((service) => (
           <li
             key={service.key}

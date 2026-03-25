@@ -4,23 +4,23 @@ import Image from "next/image";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 import SectionTitle from "../components/ui/SectionTitle";
-import { services } from "../data/services";
+import { servicesPaysagiste } from "../data/services";
 import { testimonials } from "../data/testimonials";
 
 export default function PaysagistePage() {
   return (
-    <main className="bg-gradient-to-br from-gray-900to-gray-950 min-h-screen">
+    <main className="min-h-screen">
       {/* HERO */}
       <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-6 py-20 md:py-32 max-w-7xl mx-auto">
         <div className="flex-1 flex flex-col items-start justify-center z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight drop-shadow-xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-xl">
             Paysagiste moderne
             <br />
-            <span className="text-primary">
+            <span className="text-[#fbbf24]">
               Créons votre espace vert d&apos;exception
             </span>
           </h1>
-          <p className="text-lg md:text-2xl text-gray-700 dark:text-gray-200 mb-8 max-w-xl">
+          <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-xl">
             Conception, aménagement et entretien de jardins, terrasses et
             espaces extérieurs. Expertise, créativité et technologies durables
             pour sublimer votre environnement.
@@ -46,19 +46,19 @@ export default function PaysagistePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-10text-white text-center">Nos services paysagistes</h1>
+      <section className="py-20 px-4 max-w-6xl mx-auto flex flex-col items-center gap-14">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-[#fbbf24] text-center">Nos services paysagistes</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, idx) => (
+          {servicesPaysagiste.map((service, idx) => (
             <Card
               key={idx}
-              className="flex flex-col items-center text-center bg-white dark:bg-gray-900 hover:scale-105 transition-transform duration-300"
+              className="flex flex-col items-center text-center bg-white hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
               <span className="text-5xl mb-4">{service.icon}</span>
-              <h3 className="text-xl font-bold mb-2 text-primary dark:text-white">
+              <h3 className="text-xl font-bold mb-2 text-[#fbbf24]">
                 {service.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-base">
+              <p className="text-gray-700 text-base">
                 {service.description}
               </p>
             </Card>
@@ -67,13 +67,13 @@ export default function PaysagistePage() {
       </section>
 
       {/* RÉALISATIONS / TÉMOIGNAGES */}
-      <section className="py-20 px-4 max-w-5xl mx-auto">
-        <SectionTitle>Ils nous ont fait confiance</SectionTitle>
+      <section className="py-20 px-4 max-w-5xl mx-auto flex flex-col items-center gap-12">
+        <h2 className="text-[#fbbf24] font-extrabold text-3xl md:text-5xl text-center">Ils nous ont fait confiance</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
             <Card
               key={idx}
-              className="bg-primary/90 text-white dark:bg-primary/80 flex flex-col items-center justify-center min-h-[180px]"
+              className=" text-white bg-primary/80 flex flex-col items-center justify-center min-h-[180px]"
             >
               <svg
                 width="40"
@@ -95,10 +95,10 @@ export default function PaysagistePage() {
 
       {/* CTA FINAL */}
       <section className="py-20 px-4 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-[#fbbf24]">
           Prêt à transformer votre extérieur ?
         </h2>
-        <p className="text-lg text-gray-700 dark:text-gray-200 mb-8">
+        <p className="text-lg text-gray-200 mb-8 max-w-2xl mx-auto 2xl:text-">
           Contactez notre équipe de paysagistes passionnés pour un projet
           sur-mesure, moderne et durable.
         </p>

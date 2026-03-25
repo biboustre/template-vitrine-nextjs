@@ -72,7 +72,7 @@ export default function ZoneIntervention() {
         villages de l&apos;arrière-pays Niçois et Grassois.
       </AnimatedSection>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 max-w-[1700px] mx-auto">
         {links.map((link, i) => (
           <motion.section
             key={link.href}
