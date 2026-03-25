@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { cities } from "../../data/cities";
 import HamburgerMenu from "../layout/HamburgerMenu";
 
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiChevronDown } from "react-icons/fi";
 
 const SERVICES = [
   { key: "terrassement", label: "Terrassement" },
@@ -14,7 +14,6 @@ const SERVICES = [
 ];
 
 export default function MainMenu() {
-
   const [openNav, setOpenNav] = useState<string | null>(null);
   const [show, setShow] = useState(true);
 
@@ -32,7 +31,9 @@ export default function MainMenu() {
   }, []);
 
   return (
-    <nav className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}>
+    <nav
+      className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}
+    >
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="font-bold text-xl">
@@ -51,37 +52,21 @@ export default function MainMenu() {
               À propos
             </Link>
           </li>
-
-          {SERVICES.map((service) => (
-            <li
-              key={service.key}
-              className="relative"
-              onMouseEnter={() => setOpenNav(service.key)}
-              onMouseLeave={() => setOpenNav(null)}
-            >
-              <Link
-                href={`/services/${service.key}`}
-                className="cursor-pointer uppercase font-bold"
-              >
-                {service.label}
-              </Link>
-
-              {/* Mega menu local SEO */}
-              {openNav === service.key && (
-                <div className="absolute top-full left-0 bg-white shadow-xl border rounded-lg p-4 w-[360px] grid grid-cols-2 gap-2 z-50">
-                  {cities.slice(0, 12).map((city) => (
-                    <Link
-                      key={city.slug}
-                      href={`/services/${service.key}/${city.slug}`}
-                      className="text-sm text-[#fbbf24] hover:text-[#c29c3b]"
-                    >
-                      {service.label} à {city.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
-          ))}
+          <li>
+            <Link href="/services/terrassement" className="uppercase font-bold">
+              Terrassement
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/assainissement" className="uppercase font-bold">
+              Assainissement
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/piscine" className="uppercase font-bold">
+              Piscine
+            </Link>
+          </li>
 
           <li>
             <Link href="/zones-d-intervention" className="uppercase font-bold">
@@ -100,6 +85,50 @@ export default function MainMenu() {
         <div className=" xl:hidden">
           <HamburgerMenu />
         </div>
+      </section>
+
+      <section className="flex justify-end gap-10 pr-5 py-5 border-t border-white ">
+        {SERVICES.map((service) => (
+          <li
+            key={service.key}
+            className="relative list-none"
+            onMouseEnter={() => setOpenNav(service.key)}
+            onMouseLeave={() => setOpenNav(null)}
+          >
+            <Link
+              href={`/services/${service.key}`}
+              className="cursor-pointer uppercase font-bold flex items-center gap-1"
+            >
+              {service.label}
+              <FiChevronDown
+                className={`transition-transform duration-200 ${openNav === service.key ? "rotate-180" : "rotate-0"}`}
+                size={18}
+                aria-label="Afficher le sous-menu"
+              />
+            </Link>
+
+            {/* Mega menu local SEO */}
+            {openNav === service.key && (
+              <div className="absolute top-full right-0 bg-white shadow-xl border rounded-lg p-4 w-[360px] grid grid-cols-2 gap-2 z-50">
+                {cities.slice(0, 12).map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/services/${service.key}/${city.slug}`}
+                    className="text-sm text-[#fbbf24] hover:text-[#c29c3b]"
+                  >
+                    {service.label} à {city.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </li>
+        ))}
+
+        <li className="list-none">
+          <Link href="/paysagiste" className="uppercase font-bold">
+            Paysagiste
+          </Link>
+        </li>
       </section>
     </nav>
   );

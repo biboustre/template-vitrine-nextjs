@@ -18,7 +18,7 @@ const SERVICES = [
 
 export default function SeoInternalLinks({ service, city }: Props) {
   return (
-    <section className="mt-10 space-y-16 bg-[#fbbf24] rounded-2xl shadow-xl p-8">
+    <section className="mt-10 space-y-16 bg-[#fbbf24] rounded-2xl shadow-xl shadow-slate-900/90 p-8">
       {/* 🔹 Autres services dans la même ville */}
       <div>
         <h2 className="text-2xl font-bold mb-4">

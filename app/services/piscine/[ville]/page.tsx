@@ -55,7 +55,7 @@ export default async function PiscineVillePage({ params }: PageProps) {
       <GeoSchema lat={city.lat} lng={city.lng} />
       <Breadcrumbs items={breadcrumbs} />
 
-      <div className="flex flex-col gap-4 text-slate-50">
+      <section className="flex flex-col gap-4 bg-white/90 rounded-2xl shadow-lg p-8 text-gray-700 shadow-slate-900/90 text-center items-center">
         <AnimatedSection delay={0}>
           <h1 className="text-4xl text-[#fbbf24] md:text-5xl font-extrabold mb-6 drop-shadow-lg tracking-tight animate-fade-in">
             Terrassement de piscine à {city.name}
@@ -66,16 +66,16 @@ export default async function PiscineVillePage({ params }: PageProps) {
             <p className="md:text-xl 2xl:text-2xl animate-fade-in">{line}</p>
           </AnimatedSection>
         ))}
-        <AnimatedSection delay={content.split("\n").length * 40 + 200}>
-          <SeoInternalLinks
-            service="piscine"
-            city={{
-              name: city.name,
-              slug: city.slug,
-            }}
-          />
-        </AnimatedSection>
-      </div>
+      </section>
+      <AnimatedSection delay={content.split("\n").length * 40 + 200}>
+        <SeoInternalLinks
+          service="piscine"
+          city={{
+            name: city.name,
+            slug: city.slug,
+          }}
+        />
+      </AnimatedSection>
     </main>
   );
 }
