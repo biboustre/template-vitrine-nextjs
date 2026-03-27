@@ -40,7 +40,7 @@ export default function ServicesSection() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 0.55, scale: 1 }}
         transition={{ delay: 0.2, duration: 1.2 }}
-        src="/images/banners/engin-2.jpg"
+        src="/images/banners/mini-pelle-5.jpg"
         alt="Terrassement professionnel"
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-[-10]"
       />

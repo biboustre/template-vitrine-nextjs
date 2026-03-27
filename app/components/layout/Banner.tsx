@@ -20,8 +20,7 @@ export default function Banner() {
       className="
         relative w-full
         h-[90vh] min-h-[420px]
-        md:h-[70vh] md:min-h-[520px]
-        lg:h-[98vh]
+        lg:h-[100vh]
       "
     >
       {/* Image de fond dynamique selon la page */}

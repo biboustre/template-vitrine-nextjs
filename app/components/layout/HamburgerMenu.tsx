@@ -56,6 +56,7 @@ export default function HamburgerMenu() {
                 À propos
               </Link>
             </li>
+            
             {SERVICES.map((service) => (
               <li key={service.key} className="relative">
                 <button
@@ -102,6 +103,11 @@ export default function HamburgerMenu() {
                 )}
               </li>
             ))}
+            <li className="">
+              <Link href="/paysagiste" className="uppercase font-bold text-gray-700 hover:text-primary transition-colors">
+                Paysagiste
+              </Link>
+            </li>
             <li>
               <Link
                 href="/zones-d-intervention"

@@ -14,13 +14,23 @@ const SERVICES = [
   { key: "piscine", label: "Piscine" },
 ];
 
+const linksPrincipales = [
+  { href: "/", label: "Accueil" },
+  { href: "/about", label: "À propos" },
+  { href: "/services/terrassement", label: "Terrassement" },
+  { href: "/services/assainissement", label: "Assainissement" },
+  { href: "/services/piscine", label: "Piscine" },
+  { href: "/zones-d-intervention", label: "Zones d'intervention" },
+  { href: "/contact", icon: <FiMail size={18} /> },
+];
+
 export default function MainMenu() {
   const [openNav, setOpenNav] = useState<string | null>(null);
   const [show, setShow] = useState(true);
 
   useEffect(() => {
     let lastY = window.scrollY;
-    const threshold = window.innerHeight / 4;
+    const threshold = window.innerHeight / 8;
     const onScroll = () => {
       const y = window.scrollY;
       if (y < threshold || y < lastY) setShow(true);
@@ -37,49 +47,29 @@ export default function MainMenu() {
     >
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-end items-center">
         {/* Logo */}
-        <Link href="/" className="inline-block absolute left-5 -top-5 font-bold text-xl">
-          <Image src="/images/transparent-logo.png" alt="Bertrand Solutions Terrassement" width={150} height={50} />
+        <Link
+          href="/"
+          className="inline-block absolute left-5 xl:top-0 font-bold text-xl"
+        >
+          <Image
+            src="/images/transparent-logo.png"
+            alt="Bertrand Solutions Terrassement"
+            width={150}
+            height={50}
+            className="w-[100px] h-[90px] xl:w-[150px] xl:h-[100px]"
+          />
         </Link>
 
         {/* Menu principal desktop/tablette */}
-        <ul className="hidden xl:flex gap-8 items-center">
-          <li>
-            <Link href="/" className="uppercase font-bold">
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="uppercase font-bold">
-              À propos
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/terrassement" className="uppercase font-bold">
-              Terrassement
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/assainissement" className="uppercase font-bold">
-              Assainissement
-            </Link>
-          </li>
-          <li>
-            <Link href="/services/piscine" className="uppercase font-bold">
-              Piscine
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/zones-d-intervention" className="uppercase font-bold">
-              Zones d&apos;intervention
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/contact" aria-label="Contact">
-              <FiMail size={22} />
-            </Link>
-          </li>
+        <ul className="hidden xl:flex items-center gap-8">
+          {linksPrincipales.map((link) => (
+            <li key={link.href} className="list-none">
+              <Link href={link.href} className="uppercase font-bold">
+                {link.icon && <span className="">{link.icon}</span>}
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Menu hamburger mobile/tablette */}
@@ -88,7 +78,7 @@ export default function MainMenu() {
         </div>
       </section>
 
-      <section className="flex justify-end gap-10 pr-5 py-5 border-t border-white 2xl:max-w-7xl mx-auto">
+      <section className="hidden xl:flex justify-end gap-10 pr-5 py-5 border-t border-white 2xl:max-w-7xl mx-auto">
         {SERVICES.map((service) => (
           <li
             key={service.key}

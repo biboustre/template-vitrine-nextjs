@@ -16,7 +16,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const styleButton =
-    "inline-block px-8 py-4 uppercase rounded-full bg-primary font-bold shadow-lg transition-colors transition-transform hover:scale-95 duration-300 text-white hover:bg-white hover:text-[#fbbf24]";
+    "inline-block px-8 py-4 uppercase rounded-full bg-primary font-bold shadow-lg  transition-transform hover:scale-95 duration-300 text-white hover:bg-white hover:text-[#fbbf24] transition-colors duration-300";
 
   const button = (
     <button className={`${styleButton} ${className ?? ""}`} {...props}>

@@ -13,7 +13,7 @@ export const bannerConfig: Record<string, BannerConfig> = {
     title: "Bienvenue chez Bertrand Solution Terrassement",
     subtitle:
       "Artisan de confiance pour tous vos travaux de terrassement et rénovation en région paca",
-    image: "/images/banners/engin-4.jpg",
+    image: "/images/banners/mini-pelle-7.jpg",
     cta: {
       label: "Demander un devis gratuit",
       href: "/contact",

@@ -1,9 +1,8 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
-import SectionTitle from "../components/ui/SectionTitle";
 import { servicesPaysagiste } from "../data/services";
 import { testimonials } from "../data/testimonials";
 
@@ -11,8 +10,8 @@ export default function PaysagistePage() {
   return (
     <main className="min-h-screen">
       {/* HERO */}
-      <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-6 py-20 md:py-32 max-w-7xl mx-auto">
-        <div className="flex-1 flex flex-col items-start justify-center z-10">
+      <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 px-6 py-20 md:py-32 max-w-7xl mx-auto">
+        <section className="flex-1 flex flex-col items-start justify-center z-10">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-xl">
             Paysagiste moderne
             <br />
@@ -31,23 +30,24 @@ export default function PaysagistePage() {
           >
             Demander un devis
           </Button>
-        </div>
-        <div className="flex-1 flex justify-center items-center relative min-h-[320px]">
+        </section>
+        <figure className="relative  w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] lg:flex-1 flex justify-center items-center">
           <Image
-            src="/images/banners/engin-4.jpg"
+            src="/images/banners/deblement-arbre.jpg"
             alt="Paysagiste moderne"
-            width={600}
-            height={500}
+            fill
             className="rounded-3xl shadow-2xl object-cover border-4 border-primary/30"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             priority
           />
-          {/* Ajoutez une image adaptée dans public/images/banners/engin-4.jpg */}
-        </div>
+        </figure>
       </section>
 
       {/* SERVICES */}
       <section className="py-20 px-4 max-w-6xl mx-auto flex flex-col items-center gap-14">
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-[#fbbf24] text-center">Nos services paysagistes</h1>
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-10 text-[#fbbf24] text-center">
+          Nos services paysagistes
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesPaysagiste.map((service, idx) => (
             <Card
@@ -58,9 +58,7 @@ export default function PaysagistePage() {
               <h3 className="text-xl font-bold mb-2 text-[#fbbf24]">
                 {service.title}
               </h3>
-              <p className="text-gray-700 text-base">
-                {service.description}
-              </p>
+              <p className="text-gray-700 text-base">{service.description}</p>
             </Card>
           ))}
         </div>
@@ -68,7 +66,9 @@ export default function PaysagistePage() {
 
       {/* RÉALISATIONS / TÉMOIGNAGES */}
       <section className="py-20 px-4 max-w-5xl mx-auto flex flex-col items-center gap-12">
-        <h2 className="text-[#fbbf24] font-extrabold text-3xl md:text-5xl text-center">Ils nous ont fait confiance</h2>
+        <h2 className="text-[#fbbf24] font-extrabold text-3xl md:text-5xl text-center">
+          Ils nous ont fait confiance
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t, idx) => (
             <Card

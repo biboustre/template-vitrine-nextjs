@@ -34,24 +34,26 @@ export default function HeroImages() {
           delay={idx * 350}
           className="flex-1 relative"
         >
-          <figure className="flex-1 relative h-48 md:h-72">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              width={500}
-              height={300}
-              className="w-full h-[200px] object-cover rounded-lg shadow-lg md:scale-90"
-              priority
-            />
-            <figcaption>
-              <Link
-                href={img.href}
-                className="mt-5 md:mt-3 uppercase bg-primary py-1 md:py-2 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-105 transition-transform md:scale-90"
-              >
-                {img.text}
-              </Link>
-            </figcaption>
-          </figure>
+          <Link href={img.href} className="block hover:scale-95 transition-transform">
+            <figure className="flex-1 relative h-48">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                width={500}
+                height={300}
+                className="w-full h-[200px] object-cover rounded-lg shadow-lg md:scale-90"
+                priority
+              />
+            </figure>
+          </Link>
+          <figcaption>
+            <Link
+              href={img.href}
+              className="mt-5 md:mt-3 uppercase bg-primary py-1 md:py-2 flex items-center justify-center text-white font-bold text-lg md:text-xl tracking-widest rounded-full hover:scale-105 transition-transform md:scale-90"
+            >
+              {img.text}
+            </Link>
+          </figcaption>
         </AnimatedAppear>
       ))}
     </section>
