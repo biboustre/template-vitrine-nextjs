@@ -70,7 +70,7 @@ export default function PaysagistePage() {
           Ils nous ont fait confiance
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, idx) => (
+          {testimonials.filter((t) => t.category === "paysagiste").map((t, idx) => (
             <Card
               key={idx}
               className=" text-white bg-primary/80 flex flex-col items-center justify-center min-h-[180px]"
@@ -87,7 +87,7 @@ export default function PaysagistePage() {
                   fill="currentColor"
                 />
               </svg>
-              <blockquote className="italic text-lg">“{t.quote}”</blockquote>
+              <blockquote className="italic text-lg">“{t.content}”</blockquote>
             </Card>
           ))}
         </div>

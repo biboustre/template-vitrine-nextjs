@@ -9,7 +9,7 @@ export default function TestimonialsSection() {
     <section className="py-16 px-4 ">
       <TitleH2 title="Témoignages de nos clients" />
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch max-w-[1700px] mx-auto mt-12">
-        {testimonials.map((t, idx) => (
+        {testimonials.filter((t) => t.category === "terrassement").map((t, idx) => (
           <motion.blockquote
             key={idx}
             initial={{ opacity: 0, x: idx % 2 === 0 ? -60 : 60 }}
@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
             viewport={{ once: true, amount: 0.6 }}
             className="bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-2xl shadow-xl p-8 border-l-4 border-white flex-1"
           >
-            <p className="italic text-lg mb-4">“{t.quote}”</p>
+            <p className="italic text-lg mb-4">“{t.content}”</p>
             {/* <footer className="text-primary dark:text-white font-semibold">
               {t.name}{" "}
               <span className="text-gray-500 font-normal">({t.company})</span>
