@@ -25,23 +25,23 @@ export default function MentionsLegales() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="mb-6 text-base text-gray-700 dark:text-gray-200 text-center"
         >
-          Informations légales du site Terrassement Pro, entreprise spécialisée en terrassement, aménagement de terrain et travaux publics en France.
+          Informations légales du site Bertrand solution terrassement, entreprise spécialisée en terrassement, aménagement de terrain et travaux publics en France.
         </motion.p>
         <div className="space-y-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Éditeur du site</h2>
             <p>
-              <strong>Terrassement Pro</strong><br />
+              <strong>Bertrand Solution Terrassement</strong><br />
               SARL au capital de 50 000 €<br />
               RCS Paris 123 456 789<br />
               10 Rue de l&apos;Excavation, 75000 Paris<br />
-              Tél : <a href="tel:+33123456789" className="underline hover:text-primary">+33 1 23 45 67 89</a><br />
-              Email : <a href="mailto:contact@terrassementpro.com" className="underline hover:text-primary">contact@terrassementpro.com</a>
+              Tél : <a href="tel:+33" className="underline hover:text-primary">+33 1 23 45 67 89</a><br />
+              Email : <a href="mailto:contact@bertrand-solution-terrassement.com" className="underline hover:text-primary">contact@bertrand-solution-terrassement.com</a>
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Directeur de la publication</h2>
-            <p>Ianis Bertrand, Gérant de Terrassement Pro</p>
+            <p>Ianis Bertrand, Gérant de Bertrand Solution Terrassement</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Hébergeur</h2>
@@ -55,25 +55,25 @@ export default function MentionsLegales() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Propriété intellectuelle</h2>
             <p>
-              Tous les contenus du site (textes, images, graphismes, logos, vidéos, icônes, sons) sont la propriété exclusive de Terrassement Pro ou de ses partenaires. Toute reproduction, distribution ou modification est interdite sans accord écrit préalable.
+              Tous les contenus du site (textes, images, graphismes, logos, vidéos, icônes, sons) sont la propriété exclusive de Bertrand Solution Terrassement ou de ses partenaires. Toute reproduction, distribution ou modification est interdite sans accord écrit préalable.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Données personnelles</h2>
             <p>
-              Terrassement Pro s&apos;engage à protéger la vie privée de ses utilisateurs. Les données collectées sont utilisées uniquement pour répondre aux demandes de contact et ne sont jamais transmises à des tiers. Conformément à la loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données en nous contactant.
+              Bertrand Solution Terrassement s&apos;engage à protéger la vie privée de ses utilisateurs. Les données collectées sont utilisées uniquement pour répondre aux demandes de contact et ne sont jamais transmises à des tiers. Conformément à la loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données en nous contactant.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Responsabilité</h2>
             <p>
-              Terrassement Pro ne saurait être tenu responsable des dommages directs ou indirects causés au matériel de l&apos;utilisateur lors de l&apos;accès au site, ni des dommages indirects consécutifs à l&apos;utilisation du site.
+              Bertrand Solution Terrassement ne saurait être tenu responsable des dommages directs ou indirects causés au matériel de l&apos;utilisateur lors de l&apos;accès au site, ni des dommages indirects consécutifs à l&apos;utilisation du site.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.6 }}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Liens hypertextes</h2>
             <p>
-              Le site peut contenir des liens vers d&apos;autres sites. Terrassement Pro n&apos;est pas responsable du contenu de ces sites. La création de liens vers ce site est autorisée sous réserve de ne pas porter préjudice à son image.
+              Le site peut contenir des liens vers d&apos;autres sites. Bertrand Solution Terrassement n&apos;est pas responsable du contenu de ces sites. La création de liens vers ce site est autorisée sous réserve de ne pas porter préjudice à son image.
             </p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.7 }}>
