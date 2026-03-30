@@ -7,8 +7,9 @@ type LogoProps = {
   alt?: string;
   width?: number;
   height?: number;
-  className?: string;
+  classNameImg?: string;
   title?: string; // Si texte
+  className?: string;
 };
 
 export const Logo: React.FC<LogoProps> = ({
@@ -16,20 +17,19 @@ export const Logo: React.FC<LogoProps> = ({
   alt = "Logo",
   width = 40,
   height = 40,
-  className = "font-bold text-xl",
-  title,
+  classNameImg = "inline-block absolute left-5 xl:top-0 font-bold text-xl",
+  className
 }) =>
-  src ? (
-    <Image
+  src && (
+    
+    <Link href="/" className={`inline-block absolute left-5 xl:top-0 font-bold text-xl ${className}`}>
+      <Image
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={className}
+      className={classNameImg}
       priority
     />
-  ) : (
-    <Link href="/">
-      <h1 className={className}>{title}</h1>
     </Link>
   );

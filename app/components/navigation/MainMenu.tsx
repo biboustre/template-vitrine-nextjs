@@ -7,6 +7,7 @@ import HamburgerMenu from "../layout/HamburgerMenu";
 
 import { FiMail, FiChevronDown } from "react-icons/fi";
 import Image from "next/image";
+import { Logo } from "../ui/Logo";
 
 const SERVICES = [
   { key: "terrassement", label: "Terrassement" },
@@ -46,8 +47,8 @@ export default function MainMenu() {
       className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}
     >
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-end items-center">
-        {/* Logo */}
-        <Link
+         {/* Logo */}
+        {/* <Link
           href="/"
           className="inline-block absolute left-5 xl:top-0 font-bold text-xl"
         >
@@ -58,7 +59,14 @@ export default function MainMenu() {
             height={50}
             className="w-[100px] h-[90px] xl:w-[150px] xl:h-[100px]"
           />
-        </Link>
+        </Link> */}
+        <Logo
+          src="/images/transparent-logo.png"
+          alt="Bertrand Solutions Terrassement"
+          width={150}
+          height={50}
+          classNameImg="w-[100px] h-[90px] xl:w-[150px] xl:h-[100px]"
+        />
 
         {/* Menu principal desktop/tablette */}
         <ul className="hidden xl:flex items-center gap-8">

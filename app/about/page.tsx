@@ -3,6 +3,34 @@ import { motion } from "framer-motion";
 import ValueCard from "../components/ui/ValueCard";
 import { FaHardHat, FaLeaf, FaHandshake, FaTools } from "react-icons/fa";
 import Button from "../components/ui/Button";
+import AnimatedSection from "../components/ui/animations/AnimatedSection";
+
+const infosCards = [
+  {
+    icon: <FaHardHat className="text-orange-500" />,
+    title: "Expertise & Savoir-faire",
+    description:
+      "Des professionnels qualifiés, formés aux dernières techniques de terrassement et d’aménagement.",
+  },
+  {
+    icon: <FaLeaf className="text-green-500" />,
+    title: "Respect de l’environnement",
+    description:
+      "Des méthodes responsables et des matériaux adaptés pour préserver votre terrain et la nature.",
+  },
+  {
+    icon: <FaHandshake className="text-blue-500" />,
+    title: "Accompagnement sur-mesure",
+    description:
+      "Un interlocuteur unique, à l’écoute de vos besoins, pour un projet clé en main et sans surprise.",
+  },
+  {
+    icon: <FaTools className="text-gray-500" />,
+    title: "Matériel moderne",
+    description:
+      "Un parc d’engins performant pour garantir rapidité, sécurité et qualité d’exécution.",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -18,11 +46,7 @@ export default function AboutPage() {
           >
             Bertrand Solutions Terrassement : Notre Expertise
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.7 }}
+          <AnimatedSection
             className="text-lg text-white dark:text-white max-w-2xl mx-auto text-center md:text-xl"
           >
             Spécialistes du terrassement depuis plus de 10 ans, nous
@@ -31,49 +55,22 @@ export default function AboutPage() {
             et d&apos;aménagement extérieur. Notre équipe expérimentée
             s&apos;engage à fournir un travail de qualité, dans le respect des
             délais et de l&apos;environnement.
-          </motion.p>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0, y: 40 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.15 },
-              },
-            }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          >
-            <ValueCard
-              icon={<FaHardHat className="text-orange-500" />}
-              title="Expertise & Savoir-faire"
-              description="Des professionnels qualifiés, formés aux dernières techniques de terrassement et d’aménagement."
-            />
-            <ValueCard
-              icon={<FaLeaf className="text-green-500" />}
-              title="Respect de l’environnement"
-              description="Des méthodes responsables et des matériaux adaptés pour préserver votre terrain et la nature."
-            />
-            <ValueCard
-              icon={<FaHandshake className="text-blue-500" />}
-              title="Accompagnement sur-mesure"
-              description="Un interlocuteur unique, à l’écoute de vos besoins, pour un projet clé en main et sans surprise."
-            />
-            <ValueCard
-              icon={<FaTools className="text-gray-500" />}
-              title="Matériel moderne"
-              description="Un parc d’engins performant pour garantir rapidité, sécurité et qualité d’exécution."
-            />
-          </motion.div>
+          </AnimatedSection>
+
+          <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {infosCards.map((card, idx) => (
+              <AnimatedSection key={idx} delay={idx * 150}>
+                <ValueCard
+                  icon={card.icon}
+                  title={card.title}
+                  description={card.description}
+                />
+              </AnimatedSection>
+            ))}
+          </section>
         </section>
 
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <AnimatedSection
           className="max-w-3xl mx-auto mb-7"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">
@@ -88,13 +85,9 @@ export default function AboutPage() {
             Nous intervenons dans le respect des normes, avec une attention
             particulière portée à la sécurité et à la satisfaction client.
           </p>
-        </motion.section>
+        </AnimatedSection>
 
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        <AnimatedSection
           className="max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">
@@ -106,13 +99,9 @@ export default function AboutPage() {
             formation continue et à l&apos;innovation pour garantir à nos
             clients les meilleures prestations.
           </p>
-        </motion.section>
+        </AnimatedSection>
 
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+        <AnimatedSection
           className="max-w-3xl mx-auto text-center mt-32 bg-gradient-to-r from-gray-900 to-gray-700 rounded-2xl shadow-xl p-8"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">
@@ -126,7 +115,7 @@ export default function AboutPage() {
           <Button href="/contact" aria-label="Aller à la page contact">
             Demander un devis
           </Button>
-        </motion.section>
+        </AnimatedSection>
       </section>
     </main>
   );

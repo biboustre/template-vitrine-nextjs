@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cities } from "../../data/cities";
+import AnimatedSection from "../ui/animations/AnimatedSection";
 
 const SERVICES = [
   { key: "assainissement", label: "Assainissement" },
@@ -12,7 +13,7 @@ export default function SeoFooter() {
     <footer className="bg-primary mt-24">
       <section className="flex flex-col py-20 px-5 md:flex-row md:justify-around gap-12 md:px-10">
         {/* Bloc présentation */}
-        <div>
+        <AnimatedSection delay={100}>
           <h3 className="font-bold text-2xl mb-4 2xl:text-3xl">
             Entreprise de TP & Assainissement
           </h3>
@@ -21,10 +22,10 @@ export default function SeoFooter() {
             dans le Var (83) et les Alpes-Maritimes. Intervention rapide dans
             plus de {cities.length} communes.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Bloc services */}
-        <div>
+        <AnimatedSection delay={200}>
           <h3 className="font-bold mb-4 text-2xl 2xl:text-3xl">Nos services</h3>
           <ul className="space-y-2 2xl:text-lg">
             {SERVICES.map((service) => (
@@ -38,12 +39,12 @@ export default function SeoFooter() {
               </li>
             ))}
           </ul>
-        </div>
+        </AnimatedSection>
 
         {/* Bloc villes */}
-        <div>
+        <AnimatedSection delay={300}>
           <h3 className="font-bold mb-4 text-2xl 2xl:text-3xl">
-            Zones d’intervention
+            Zones d&apos;intervention
           </h3>
           <ul className="grid grid-cols-2 gap-2 2xl:text-lg">
             {cities.map((city) => (
@@ -57,10 +58,10 @@ export default function SeoFooter() {
               </li>
             ))}
           </ul>
-        </div>
+        </AnimatedSection>
 
         {/* Bloc SEO fort */}
-        <div>
+        <AnimatedSection delay={400}>
           <h3 className="font-bold mb-4 text-2xl 2xl:text-3xl">
             Prestations locales
           </h3>
@@ -76,13 +77,13 @@ export default function SeoFooter() {
               </li>
             ))}
           </ul>
-        </div>
+        </AnimatedSection>
       </section>
 
-      <div className="border-t border-gray-800 py-4 text-center text-sm 2xl:text-base">
+      <section className="border-t border-gray-800 py-4 text-center text-sm 2xl:text-base">
         © {new Date().getFullYear()} – Tous droits réservés – Travaux publics &
         assainissement
-      </div>
+      </section>
     </footer>
   );
 }
