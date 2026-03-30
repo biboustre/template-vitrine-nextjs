@@ -1,10 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Button from "../ui/Button";
-
 import { useContactForm } from "./useContactForm";
 import { InputField, TextareaField } from "./FormFields";
+import AnimatedSection from "../ui/animations/AnimatedSection";
 
 // Est utilisé déja dans usecontactform.ts 
 // const FORMSPREE_ENDPOINT = "https://formspree.io/f/maqpqplo";
@@ -13,23 +12,15 @@ export default function ContactForm() {
   const { loading, success, error, handleSubmit } = useContactForm();
 
   return (
-    <motion.form
+    <form
       onSubmit={handleSubmit}
       className="w-full max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8 space-y-6"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0 }}
+      <AnimatedSection delay={100}
       >
         <InputField label="Nom" id="name" name="name" type="text" required />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.15 }}
+      </AnimatedSection>
+      <AnimatedSection delay={200}
       >
         <InputField
           label="Email"
@@ -38,12 +29,18 @@ export default function ContactForm() {
           type="email"
           required
         />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+      </AnimatedSection>
+      <AnimatedSection delay={300}
+      >
+        <InputField
+          label="Numéro de téléphone"
+          id="phone"
+          name="phone"
+          type="tel"
+          required
+        />
+      </AnimatedSection>
+      <AnimatedSection delay={400}
       >
         <TextareaField
           label="Message"
@@ -52,12 +49,8 @@ export default function ContactForm() {
           required
           rows={5}
         />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.45 }}
+      </AnimatedSection>
+      <AnimatedSection delay={500}
         className="flex flex-col items-start gap-2"
       >
         <Button
@@ -74,7 +67,7 @@ export default function ContactForm() {
           </span>
         )}
         {error && <span className="text-red-600 text-sm mt-1">{error}</span>}
-      </motion.div>
-    </motion.form>
+      </AnimatedSection>
+    </form>
   );
 }
