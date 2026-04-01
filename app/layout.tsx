@@ -6,6 +6,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Banner from "./components/layout/Banner";
 import { DarkModeProvider } from "./components/layout/DarkModeProvider";
+import Script from "next/dist/client/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,38 +21,40 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Entreprise de terrassement à Saint-Raphaël & Fréjus – TP Terrassement Pro",
+      "Entreprise de terrassement dans les alpes-maritime – Bertrand Solution Terrassement",
     template: "%s | TP Terrassement Pro",
   },
   description:
-    "Entreprise de terrassement à Saint-Raphaël et Fréjus : VRD, assainissement, fondations, piscines, déblai-remblai et nivellement. Devis gratuit, intervention rapide.",
+    "Entreprise de terrassement dans les alpes-maritime : VRD, assainissement, fondations, piscines, déblai-remblai et nivellement. Devis gratuit, intervention rapide.",
   keywords: [
     "terrassement",
     "travaux publics",
     "VRD",
     "assainissement",
     "terrassier",
-    "terrassement Saint-Raphaël",
-    "terrassement Fréjus",
+    "paysagiste",
+    "éspace vert",
     "terrassement Nice",
+    "terrassement séranon",
+    "terrassement Grasse",
   ],
-  metadataBase: new URL("https://www.tp-terrassement-pro.fr"),
+  metadataBase: new URL("https://bertrand-solution-terrassement.vercel.app/"),
   alternates: {
-    canonical: "/",
+    canonical: "https://bertrand-solution-terrassement.vercel.app/",
   },
   openGraph: {
     title:
-      "Entreprise de terrassement à Saint-Raphaël & Fréjus – TP Terrassement Pro",
+      "Entreprise de terrassement dans les alpes-maritime – Bertrand Solution Terrassement",
     description:
-      "Spécialiste du terrassement, VRD, fondations, piscines et travaux publics à Saint-Raphaël et Fréjus.",
-    url: "https://www.tp-terrassement-pro.fr",
-    siteName: "TP Terrassement Pro",
+      "Spécialiste du terrassement, VRD, fondations, piscines et travaux publics dans les alpes-maritime.",
+    url: "https://bertrand-solution-terrassement.vercel.app/",
+    siteName: "Bertrand Solution Terrassement",
     images: [
       {
-        url: "/images/og-terrassement.jpg",
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "Entreprise de terrassement à Saint-Raphaël et Fréjus",
+        alt: "Entreprise de terrassement dans les alpes-maritime",
       },
     ],
     locale: "fr_FR",
@@ -59,11 +62,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Entreprise de Terrassement & Travaux Publics - TP Terrassement Pro",
+    title:
+      "Entreprise de Terrassement & Travaux Publics - Bertrand Solution Terrassement",
     description:
-      "TP Terrassement Pro Alpes maritime, spécialiste du terrassement, VRD, assainissement, nivellement et travaux publics pour professionnels et particuliers.",
-    site: "@tpterrassementpro",
-    images: ["/images/og-terrassement.jpg"],
+      " Bertrand Solution Terrassement, Alpes maritime, spécialiste du terrassement, VRD, assainissement, nivellement et travaux publics pour professionnels et particuliers.",
+    site: "@bertrandterrassement",
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,
@@ -91,32 +95,47 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        {/*
+          Balise <head> :
+          - On place ici les balises meta, liens vers polices, scripts globaux, SEO, etc.
+        */}
+        {/* Google Tag Manager */}
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TFKWQVJL');`}
+        </Script>
+        {/*
+          Script JSON-LD (données structurées Schema.org pour le SEO local)
+          - Permet aux moteurs de recherche de mieux comprendre le site (type d'entreprise, coordonnées, horaires, etc.)
+          - À personnaliser avec tes vraies infos (adresse, téléphone, réseaux sociaux, etc.)
+        */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://www.tp-terrassement-pro.fr/#business",
-              name: "TP Terrassement Pro",
-              url: "https://www.tp-terrassement-pro.fr",
-              logo: "https://www.tp-terrassement-pro.fr/images/logo.png",
+              "@id":
+                "https://bertrand-solution-terrassement.vercel.app/#business",
+              name: "Bertrand Solution Terrassement",
+              url: "https://bertrand-solution-terrassement.vercel.app/",
+              logo: "https://bertrand-solution-terrassement.vercel.app/images/logo.png",
               image: [
-                "https://www.tp-terrassement-pro.fr/images/og-terrassement.jpg",
+                "https://bertrand-solution-terrassement.vercel.app/images/logo.png",
               ],
-              telephone: "+33XXXXXXXXX",
+              telephone: "+33663058565",
               priceRange: "€€",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Adresse réelle",
-                addressLocality: "Saint-Raphaël",
-                postalCode: "83700",
+                streetAddress: "471 Chem. de la Clue, 06750 Séranon",
+                addressLocality: "Séranon",
+                postalCode: "06750",
                 addressCountry: "FR",
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 43.424,
-                longitude: 6.769,
+                latitude: 43.908,
+                longitude: 6.987,
               },
               openingHoursSpecification: [
                 {
@@ -129,7 +148,7 @@ export default function RootLayout({
                     "Friday",
                   ],
                   opens: "08:00",
-                  closes: "18:00",
+                  closes: "19:00",
                 },
               ],
               areaServed: {
@@ -143,25 +162,49 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* Google Analytics */}
+
+        {/*
+          Google Analytics (balise de chargement du script GA4)
+          - Remplace G-XXXXXXXXXX par ton vrai identifiant Google Analytics
+          - Ce script charge la librairie Google Analytics de manière asynchrone
+        */}
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-3X72RE3H2Z`}
         ></script>
-        <script
+
+        {/*
+          Google Analytics (initialisation du tracking)
+          - Ce script configure le suivi Google Analytics sur toutes les pages
+          - À personnaliser aussi avec ton identifiant GA4
+        */}
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-3X72RE3H2Z');
     `,
           }}
-        />
+        /> */}
+
+        {/*
+          Tu peux ajouter ici d'autres balises <meta>, <link> (favicon, polices, etc.) ou scripts nécessaires au SEO ou au tracking.
+        */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${bgGradient}  text-white`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TFKWQVJL"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <DarkModeProvider>
           <Header />
           <Banner />
@@ -174,12 +217,6 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-
-
-
-
 
 // Voici les étapes détaillées pour configurer le tracking GOOGLE ANALYTICS (GA4) sur ton site Next.js pour ton client :
 
@@ -241,41 +278,24 @@ export default function RootLayout({
 // Le script doit être dans la balise <head> (comme tu l’as fait).
 // Mets à jour les infos dès qu’elles changent (adresse, horaires…).
 
+// Voici l’analyse de ton fichier layout.tsx (Next.js 2026, SEO, bonnes pratiques) :
 
-// ===================================================================================
+// Points positifs :
 
+// Utilisation correcte de la nouvelle API app/ et du composant RootLayout.
+// Déclaration complète de l’objet metadata (SEO, OpenGraph, Twitter, robots, icons).
+// Intégration des polices via next/font/google (performant).
+// Script JSON-LD pour le SEO local (très bon pour Google).
+// Préparation pour Google Analytics (GA4).
+// Structure HTML propre, balises sémantiques, accessibilité (lang, id="main-content").
+// Fournisseurs de contexte (DarkModeProvider) bien placés.
+// Suggestions/corrections :
 
-// Voici tout ce que tu dois savoir sur la section icons dans le metadata de Next.js :
-
-// À quoi ça sert ?
-// Ces propriétés servent à définir les icônes de ton site (favicon, raccourci, icône Apple) pour les navigateurs, les favoris, les onglets, les raccourcis sur mobile, etc.
-// Elles améliorent l’apparence de ton site sur tous les supports et facilitent la reconnaissance de ta marque.
-// Les différents types d’icônes
-// icon : le favicon classique (petite icône dans l’onglet du navigateur, 16x16 ou 32x32 px, format .ico ou .png).
-// shortcut : souvent identique à icon, utilisé pour certains navigateurs ou anciens systèmes.
-// apple : icône pour les raccourcis sur l’écran d’accueil iOS (format .png, idéalement 180x180 px).
-// Où placer les fichiers et comment les nommer ?
-// Place tes fichiers dans le dossier public/ à la racine de ton projet Next.js.
-// Les chemins dans le metadata doivent être relatifs à public/ (ex : public/favicon.ico → “/favicon.ico”).
-// Tu peux nommer les fichiers comme tu veux, mais les conventions sont :
-// favicon.ico (pour icon et shortcut)
-// apple-touch-icon.png (pour apple)
-// Si tu veux plusieurs tailles ou formats, tu peux ajouter d’autres balises <link> dans le <head> (voir plus bas).
-// Comment créer ces images ?
-// favicon.ico : utilise un générateur en ligne (ex : https://realfavicongenerator.net/) pour créer un .ico multi-résolution (16x16, 32x32, 48x48…).
-// apple-touch-icon.png : crée une image carrée (180x180 px, .png, fond transparent ou couleur).
-// Tu peux aussi générer des .png de 32x32, 192x192, 512x512 pour Android/PWA.
-// Exemple de structure dans public/
-// Comment référencer d’autres icônes (optionnel)
-// Si tu veux être ultra-complet, ajoute dans le <head> :
-// Mais le metadata de Next.js gère déjà l’essentiel.
-
-// Conseils
-// Utilise des images carrées, idéalement avec fond transparent (.png) pour apple-touch-icon.
-// favicon.ico doit être à la racine de public/ et contenir plusieurs tailles si possible.
-// Teste ton favicon sur différents navigateurs et appareils.
-// Pour la marque, mets ton logo ou un pictogramme reconnaissable même en petit.
-// À retenir
-// Pas besoin de déclarer toutes les tailles, mais plus tu en mets, mieux c’est pour la compatibilité.
-// Les images doivent être optimisées (pas trop lourdes).
-// Les chemins dans le metadata commencent toujours par / (racine du site).
+// Remplace G-XXXXXXXXXX par le vrai ID Google Analytics (sinon pas de tracking).
+// L’attribut alternates.canonical doit être une URL absolue (pas "/"), donc :
+// alternates: { canonical: "https://bertrand-solution-terrassement.vercel.app/" }
+// keywords n’est plus utilisé par Google, mais tu peux le garder pour d’autres moteurs.
+// Ajoute éventuellement une balise <meta name="viewport" content="width=device-width, initial-scale=1" /> dans <head> pour le responsive.
+// Vérifie que les chemins d’images (OpenGraph, favicon, etc.) sont corrects en production.
+// Pour la performance, tu peux précharger les polices si besoin (optionnel avec next/font).
+// Si tu veux aller plus loin : ajoute des balises meta supplémentaires (author, theme-color, etc.) selon le besoin.
