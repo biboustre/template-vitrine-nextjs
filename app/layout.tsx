@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.css";
@@ -212,11 +213,14 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <Analytics />
         </DarkModeProvider>
       </body>
     </html>
   );
 }
+
+// 213.186.33.5
 
 // Voici les étapes détaillées pour configurer le tracking GOOGLE ANALYTICS (GA4) sur ton site Next.js pour ton client :
 
