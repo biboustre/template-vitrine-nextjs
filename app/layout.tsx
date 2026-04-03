@@ -40,16 +40,16 @@ export const metadata: Metadata = {
     "terrassement séranon",
     "terrassement Grasse",
   ],
-  metadataBase: new URL("https://bertrand-solution-terrassement.vercel.app/"),
+  metadataBase: new URL("https://bertrandsolutionterrassement.fr/"),
   alternates: {
-    canonical: "https://bertrand-solution-terrassement.vercel.app/",
+    canonical: "https://bertrandsolutionterrassement.fr/",
   },
   openGraph: {
     title:
       "Entreprise de terrassement dans les alpes-maritime – Bertrand Solution Terrassement",
     description:
       "Spécialiste du terrassement, VRD, fondations, piscines et travaux publics dans les alpes-maritime.",
-    url: "https://bertrand-solution-terrassement.vercel.app/",
+    url: "https://bertrandsolutionterrassement.fr/",
     siteName: "Bertrand Solution Terrassement",
     images: [
       {
@@ -118,12 +118,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id":
-                "https://bertrand-solution-terrassement.vercel.app/#business",
+                "https://bertrandsolutionterrassement.fr/#business",
               name: "Bertrand Solution Terrassement",
-              url: "https://bertrand-solution-terrassement.vercel.app/",
-              logo: "https://bertrand-solution-terrassement.vercel.app/images/logo.png",
+              url: "https://bertrandsolutionterrassement.fr/",
+              logo: "https://bertrandsolutionterrassement.fr/images/logo.png",
               image: [
-                "https://bertrand-solution-terrassement.vercel.app/images/logo.png",
+                "https://bertrandsolutionterrassement.fr/images/logo.png",
               ],
               telephone: "+33663058565",
               priceRange: "€€",
