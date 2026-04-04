@@ -9,6 +9,7 @@ import Footer from "./components/layout/Footer";
 import Banner from "./components/layout/Banner";
 import { DarkModeProvider } from "./components/layout/DarkModeProvider";
 import Script from "next/dist/client/script";
+import ScrollToTop from "./components/features/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "Bertrand Solution Terrassement",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/colored-logo.svg",
         width: 1200,
         height: 630,
         alt: "Entreprise de terrassement dans les alpes-maritime",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     description:
       " Bertrand Solution Terrassement, Alpes maritime, spécialiste du terrassement, VRD, assainissement, nivellement et travaux publics pour professionnels et particuliers.",
     site: "@bertrandterrassement",
-    images: ["/images/logo.png"],
+    images: ["/images/colored-logo.svg"],
   },
   robots: {
     index: true,
@@ -121,9 +122,9 @@ export default function RootLayout({
                 "https://bertrandsolutionterrassement.fr/#business",
               name: "Bertrand Solution Terrassement",
               url: "https://bertrandsolutionterrassement.fr/",
-              logo: "https://bertrandsolutionterrassement.fr/images/logo.png",
+              logo: "https://bertrandsolutionterrassement.fr/images/colored-logo.svg",
               image: [
-                "https://bertrandsolutionterrassement.fr/images/logo.png",
+                "https://bertrandsolutionterrassement.fr/images/colored-logo.svg",
               ],
               telephone: "+33663058565",
               priceRange: "€€",
@@ -208,6 +209,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <DarkModeProvider>
+          <ScrollToTop />
           <Header />
           <Banner />
           <main id="main-content" className="">
