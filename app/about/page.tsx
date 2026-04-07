@@ -71,6 +71,7 @@ export default function AboutPage() {
         </section>
 
         <AnimatedSection
+          
           className="max-w-3xl mx-auto mb-7"
         >
           <h2 className="text-2xl font-bold mb-4 text-secondary md:text-4xl">

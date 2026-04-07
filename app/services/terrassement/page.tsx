@@ -5,6 +5,7 @@ import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import AnimatedSection from "@/app/components/ui/animations/AnimatedSection";
 import Image from "next/image";
+import Button from "@/app/components/ui/Button";
 
 export const metadata = {
   title:
@@ -97,25 +98,34 @@ export default function TerrassementPage() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={300}>
-          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1">
-              <TitleH2 title="Pourquoi choisir notre entreprise ?" />
-              <p className={fontSizeParagraphe + " text-gray-700"}>
-                Nous disposons d&apos;un matériel professionnel performant et
-                d&apos;une équipe expérimentée capable de s&apos;adapter à tous
-                types de terrains. Nous garantissons un travail précis, rapide
-                et conforme aux normes en vigueur.
-              </p>
-            </div>
+        <AnimatedSection
+          className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center"
+          delay={300}
+        >
+          <section className="flex-1">
+            <TitleH2 title="Pourquoi choisir notre entreprise ?" />
+            <p className={fontSizeParagraphe + " text-gray-700"}>
+              Nous disposons d&apos;un matériel professionnel performant et
+              d&apos;une équipe expérimentée capable de s&apos;adapter à tous
+              types de terrains. Nous garantissons un travail précis, rapide et
+              conforme aux normes en vigueur.
+            </p>
+          </section>
+          <figure className="w-full md:w-1/3">
             <Image
               width={400}
               height={300}
               src="/images/banners/mini-pelle.jpg"
               alt="Equipe professionnelle"
-              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+              className="w-full rounded-xl shadow-md object-cover h-44 md:h-56"
             />
-          </div>
+          </figure>
+        </AnimatedSection>
+
+        <AnimatedSection className="mx-auto py-10" delay={400}>
+          <Button href="/contact" className="">
+            Demander un devis
+          </Button>
         </AnimatedSection>
 
         <AnimatedSection delay={400}>

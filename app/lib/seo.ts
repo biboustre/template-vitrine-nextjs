@@ -11,7 +11,7 @@ Nous réalisons tous vos travaux de terrassement à ${city.name} et dans les com
 Notre expertise du ${city.terrain} et du ${city.soil} nous permet d’adapter nos méthodes aux contraintes locales telles que ${city.constraints}.
 
 Nous intervenons pour :
-${city.workTypes.map((w) => `- ${w}`).join("\n")}
+${city.workTypes.map((w) => `\u2022 ${w}`).join("\n")}
 
 Chaque chantier est réalisé dans le respect des normes, avec un souci permanent de qualité, de sécurité et de durabilité.
     `.trim();
@@ -25,7 +25,7 @@ Notre expertise nous permet d’intervenir efficacement sur ${city.terrain}, ave
 Nous prenons en compte les contraintes spécifiques telles que ${city.constraints} afin de garantir une installation fiable, durable et conforme aux normes en vigueur.
 
 Nos prestations incluent notamment :
-${city.workTypes.map((w) => `- ${w}`).join("\n")}
+${city.workTypes.map((w) => `\u2022 ${w}`).join("\n")}
 
 Chaque projet est étudié avec soin afin d’assurer un fonctionnement optimal de votre installation d’assainissement.
     `.trim();
@@ -40,7 +40,7 @@ Le ${city.terrain} et la nature du ${city.soil} nécessitent une étude précise
 Nous adaptons nos méthodes aux contraintes locales telles que ${city.constraints}.
 
 Nos équipes interviennent pour :
-${city.workTypes.map((w) => `- ${w}`).join("\n")}
+${city.workTypes.map((w) => `\u2022 ${w}`).join("\n")}
 
 Chaque projet piscine est conçu pour garantir longévité, sécurité et esthétisme.
     `.trim();

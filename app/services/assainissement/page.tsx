@@ -5,6 +5,7 @@ import Breadcrumbs from "@/app/components/seo/Breadcrumbs";
 import BreadcrumbSchema from "@/app/components/seo/BreadcrumbSchema";
 import AnimatedSection from "@/app/components/ui/animations/AnimatedSection";
 import Image from "next/image";
+import Button from "@/app/components/ui/Button";
 
 export const metadata = {
   title:
@@ -98,25 +99,34 @@ export default function AssainissementPage() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={300}>
-          <div className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1">
-              <TitleH2 title="Pourquoi choisir notre entreprise ?" />
-              <p className={styleParagraphe + " text-gray-700"}>
-                Nous disposons d&apos;un savoir-faire reconnu et
-                d&apos;équipements modernes permettant d&apos;intervenir
-                rapidement, efficacement et dans le strict respect de la
-                réglementation en vigueur.
-              </p>
-            </div>
+        <AnimatedSection
+          className="bg-white/90 rounded-2xl shadow-lg p-8 flex flex-col md:flex-row gap-8 items-center"
+          delay={300}
+        >
+          <section className="flex-1">
+            <TitleH2 title="Pourquoi choisir notre entreprise ?" />
+            <p className={styleParagraphe + " text-gray-700"}>
+              Nous disposons d&apos;un savoir-faire reconnu et
+              d&apos;équipements modernes permettant d&apos;intervenir
+              rapidement, efficacement et dans le strict respect de la
+              réglementation en vigueur.
+            </p>
+          </section>
+          <figure className="w-full md:w-1/3">
             <Image
               src="/images/banners/pose-canalisation.jpg"
               alt="Equipe assainissement"
-              className="w-full md:w-1/3 rounded-xl shadow-md object-cover h-44 md:h-56"
+              className="w-full rounded-xl shadow-md object-cover h-44 md:h-56"
               width={400}
               height={300}
             />
-          </div>
+          </figure>
+        </AnimatedSection>
+
+        <AnimatedSection className="mx-auto py-10" delay={400}>
+          <Button href="/contact" className="">
+            Demander un devis
+          </Button>
         </AnimatedSection>
 
         <AnimatedSection delay={400}>

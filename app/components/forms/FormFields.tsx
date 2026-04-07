@@ -36,7 +36,7 @@ export function InputField({ label, id, ...props }: InputFieldProps) {
         id={id}
         {...props}
         className={
-          "w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary " +
+          "w-full border border-[#fbbf24] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary " +
           (props.className || "")
         }
       />
@@ -59,7 +59,7 @@ export function TextareaField({ label, id, ...props }: TextareaFieldProps) {
         id={id}
         {...props}
         className={
-          "w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary " +
+          "w-full border border-[#fbbf24] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary " +
           (props.className || "")
         }
       />

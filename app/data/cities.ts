@@ -17,7 +17,7 @@ export const cities: CitySEO[] = [
     department: "Alpes-Maritimes",
     terrain: "terrain en pente avec de nombreuses restanques",
     soil: "sol calcaire typique de l’arrière-pays grassois",
-    constraints: "accès parfois étroit, zones résidentielles denses",
+    constraints: "l'accès parfois étroit, zones résidentielles denses",
     lat: 43.6584,
     lng: 6.9235,
     workTypes: [

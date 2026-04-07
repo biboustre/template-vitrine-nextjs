@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://monsite.fr/sitemap.xml",
+    sitemap: "https://bertrandsolutionterrassement.fr/sitemap.xml",
   };
 }

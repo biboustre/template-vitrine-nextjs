@@ -47,7 +47,7 @@ export default function MainMenu() {
       className={`w-full fixed z-20 bg-[#fbbf24] transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"}`}
     >
       <section className="2xl:max-w-7xl mx-auto px-5 py-4 flex justify-end items-center">
-         {/* Logo */}
+        {/* Logo */}
         {/* <Link
           href="/"
           className="inline-block absolute left-5 xl:top-0 font-bold text-xl"

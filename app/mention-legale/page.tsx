@@ -1,16 +1,44 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
+import AnimatedSection from "../components/ui/animations/AnimatedSection";
+
+const titleAndDescription = [
+  {
+    title: "Directeur de la publication",
+    description: "Ianis Bertrand, Gérant de Bertrand Solution Terrassement",
+  },
+  {
+    title: "propriété intellectuelle",
+    description:
+      "Tous les contenus du site (textes, images, graphismes, logos, vidéos, icônes, sons) sont la propriété exclusive de Bertrand Solution Terrassement ou de ses partenaires. Toute reproduction, distribution ou modification est interdite sans accord écrit préalable.",
+  },
+  {
+    title: "Données personnelles",
+    description:
+      "Bertrand Solution Terrassement s'engage à protéger la vie privée de ses utilisateurs. Les données collectées sont utilisées uniquement pour répondre aux demandes de contact et ne sont jamais transmises à des tiers. Conformément à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en nous contactant.",
+  },
+  {
+    title: "Responsabilité",
+    description:
+      "Bertrand Solution Terrassement ne saurait être tenu responsable des dommages directs ou indirects causés au matériel de l'utilisateur lors de l'accès au site, ni des dommages indirects consécutifs à l'utilisation du site.",
+  },
+  {
+    title: "Liens hypertextes",
+    description:
+      "Le site peut contenir des liens vers d'autres sites. Bertrand Solution Terrassement n'est pas responsable du contenu de ces sites. La création de liens vers ce site est autorisée sous réserve de ne pas porter préjudice à son image.",
+  },
+  {
+    title: "Droit applicable et juridiction",
+    description:
+      "Tout litige relatif à l'utilisation du site est soumis au droit français. Attribution exclusive de juridiction aux tribunaux compétents de Paris.",
+  },
+];
 
 export default function MentionsLegales() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-primary/5 to-blue-100 dark:from-gray-900 dark:to-gray-950 py-16 px-4 flex items-center justify-center">
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="w-full max-w-3xl bg-white/90 dark:bg-neutral-900 rounded-2xl shadow-xl p-8 md:p-12"
-      >
+    <main className="min-h-screen py-16 px-4 flex items-center justify-center">
+      <AnimatedSection className="w-full max-w-3xl bg-white/90 dark:bg-neutral-900 rounded-2xl shadow-xl p-8 md:p-12">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -19,72 +47,94 @@ export default function MentionsLegales() {
         >
           Mentions légales
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          className="mb-6 text-base text-gray-700 dark:text-gray-200 text-center"
-        >
-          Informations légales du site Bertrand solution terrassement, entreprise spécialisée en terrassement, aménagement de terrain et travaux publics en France.
-        </motion.p>
-        <div className="space-y-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Éditeur du site</h2>
+        <AnimatedSection delay={100}>
+          <p className="mb-6 text-base text-gray-700 dark:text-gray-200 text-center">
+            Informations légales du site Bertrand Solution Terrassement,
+            entreprise spécialisée en terrassement, aménagement de terrain et
+            travaux publics en France.
+          </p>
+        </AnimatedSection>
+        <AnimatedSection delay={200} className="space-y-6">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2 text-primary">
+              Éditeur du site
+            </h2>
             <p>
-              <strong>Bertrand Solution Terrassement</strong><br />
+              <strong>Bertrand Solution Terrassement</strong>
+              <br />
               SARL au capital de 50 000 €<br />
-              RCS Paris 123 456 789<br />
-              10 Rue de l&apos;Excavation, 75000 Paris<br />
-              Tél : <a href="tel:+33" className="underline hover:text-primary">+33 1 23 45 67 89</a><br />
-              Email : <a href="mailto:contact@bertrand-solution-terrassement.com" className="underline hover:text-primary">contact@bertrand-solution-terrassement.com</a>
+              Séranon
+              <br />
+              10 Rue de l&apos;Excavation, 06 420 Séranon
+              <br />
+              Tél :{" "}
+              <a
+                href="tel:+33663058565"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Appeler le numéro de téléphone"
+                className="underline hover:text-primary"
+              >
+                +33 6 63 05 85 65
+              </a>
+              <br />
+              Email :{" "}
+              <a
+                href="mailto:bertrandsolutionterrassement@gmail.com"
+                className="underline hover:text-primary"
+                title="Envoyer un email à Bertrand Solution Terrassement"
+                aria-label="Aller vers votre boite mail"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                bertrandsolutionterrassement@gmail.com
+              </a>
             </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Directeur de la publication</h2>
+          </AnimatedSection>
+          <AnimatedSection delay={300}>
+            <h2 className="text-2xl font-bold mb-2 text-primary">
+              Directeur de la publication
+            </h2>
             <p>Ianis Bertrand, Gérant de Bertrand Solution Terrassement</p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
+          </AnimatedSection>
+          <AnimatedSection delay={400}>
             <h2 className="text-2xl font-bold mb-2 text-primary">Hébergeur</h2>
             <p>
-              OVH SAS<br />
-              2 rue Kellermann, 59100 Roubaix, France<br />
-              Tél : <a href="tel:+33972101007" className="underline hover:text-primary">+33 9 72 10 10 07</a><br />
-              Email : <a href="mailto:contact@ovh.com" className="underline hover:text-primary">contact@ovh.com</a>
+              OVH SAS
+              <br />
+              2 rue Kellermann, 59100 Roubaix, France
+              <br />
+              Tél :{" "}
+              <a
+                href="tel:+33972101007"
+                className="underline hover:text-primary"
+              >
+                +33 9 72 10 10 07
+              </a>
+              <br />
+              Email :{" "}
+              <a
+                href="mailto:contact@ovh.com"
+                  title="Envoyer un email à OVH"
+                  aria-label="Aller vers votre boite mail"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                className="underline hover:text-primary"
+              >
+                contact@ovh.com
+              </a>
             </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Propriété intellectuelle</h2>
-            <p>
-              Tous les contenus du site (textes, images, graphismes, logos, vidéos, icônes, sons) sont la propriété exclusive de Bertrand Solution Terrassement ou de ses partenaires. Toute reproduction, distribution ou modification est interdite sans accord écrit préalable.
-            </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.4 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Données personnelles</h2>
-            <p>
-              Bertrand Solution Terrassement s&apos;engage à protéger la vie privée de ses utilisateurs. Les données collectées sont utilisées uniquement pour répondre aux demandes de contact et ne sont jamais transmises à des tiers. Conformément à la loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de rectification et de suppression de vos données en nous contactant.
-            </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Responsabilité</h2>
-            <p>
-              Bertrand Solution Terrassement ne saurait être tenu responsable des dommages directs ou indirects causés au matériel de l&apos;utilisateur lors de l&apos;accès au site, ni des dommages indirects consécutifs à l&apos;utilisation du site.
-            </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.6 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Liens hypertextes</h2>
-            <p>
-              Le site peut contenir des liens vers d&apos;autres sites. Bertrand Solution Terrassement n&apos;est pas responsable du contenu de ces sites. La création de liens vers ce site est autorisée sous réserve de ne pas porter préjudice à son image.
-            </p>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.7 }}>
-            <h2 className="text-2xl font-bold mb-2 text-primary">Droit applicable et juridiction</h2>
-            <p>
-              Tout litige relatif à l&apos;utilisation du site est soumis au droit français. Attribution exclusive de juridiction aux tribunaux compétents de Paris.
-            </p>
-          </motion.div>
-        </div>
-      </motion.section>
+          </AnimatedSection>
+          {titleAndDescription.map((item, index) => (
+            <AnimatedSection key={index} delay={300 + index * 100}>
+              <h2 className="text-2xl font-bold mb-2 text-primary">
+                {item.title}
+              </h2>
+              <p>{item.description}</p>
+            </AnimatedSection>
+          ))}
+        </AnimatedSection>
+      </AnimatedSection>
     </main>
   );
 }
-      

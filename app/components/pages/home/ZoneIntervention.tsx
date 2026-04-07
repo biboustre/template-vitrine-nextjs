@@ -67,9 +67,9 @@ export default function ZoneIntervention() {
         delay={200}
         className="text-xl text-center mb-6 max-w-3xl mx-auto 2xl:text-2xl"
       >
-        Nous intervenons dans le secteur des Alpes-Maritimes et du Var : Nice,
+        Nous intervenons dans le secteur des Alpes-Maritimes : Nice,
         Grasse, Canne, Seranon, Saint-Auban ainsi que dans les
-        villages de l&apos;arrière-pays Niçois et Grassois.
+        villages de l&apos;arrière-pays Grassois.
       </AnimatedSection>
 
       <div className="flex flex-wrap justify-center gap-4 max-w-[1700px] mx-auto">

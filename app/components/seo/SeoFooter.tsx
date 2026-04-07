@@ -80,10 +80,10 @@ export default function SeoFooter() {
         </AnimatedSection>
       </section>
 
-      <section className="border-t border-gray-800 py-4 text-center text-sm 2xl:text-base">
+      <div className="border-t border-gray-800 py-4 text-center text-sm 2xl:text-base">
         © {new Date().getFullYear()} – Tous droits réservés – Travaux publics &
         assainissement
-      </section>
+      </div>
     </footer>
   );
 }
